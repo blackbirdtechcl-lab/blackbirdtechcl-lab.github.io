@@ -14,13 +14,19 @@
 <meta property="og:url" content="https://blackbirdtech.cl/" />
 <meta property="og:site_name" content="Blackbird Tech" />
 <meta property="og:locale" content="es_CL" />
+<meta property="og:image" content="https://blackbirdtech.cl/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Blackbird Tech — Una empresa construida por agentes. Operada por un humano." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://blackbirdtech.cl/og.png" />
 <meta name="theme-color" content="#FAFAF7" />
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230B1020'/%3E%3Cpath d='M8 33 L30 29 L40 20 L44 20 L42 29 L56 32 L42 35 L44 44 L40 44 L30 35 Z' fill='%23FAFAF7'/%3E%3Ccircle cx='50' cy='32' r='2' fill='%23FC3D21'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Blackbird Tech SpA","url":"https://blackbirdtech.cl/","email":"contacto@blackbirdtech.cl","address":{"@type":"PostalAddress","addressLocality":"Santiago","addressCountry":"CL"},"description":"Desarrollo de software e I+D en inteligencia artificial aplicada."}
+{"@context":"https://schema.org","@type":"Organization","name":"Blackbird Tech SpA","url":"https://blackbirdtech.cl/","email":"ops@blackbirdtech.cl","address":{"@type":"PostalAddress","addressLocality":"Santiago","addressCountry":"CL"},"description":"Desarrollo de software e I+D en inteligencia artificial aplicada."}
 </script>
 <style>
   :root{
@@ -184,6 +190,13 @@
   .rules .t{font-weight:700;font-size:17px;letter-spacing:-.005em}
   .rules .d{color:var(--muted);font-size:14.5px;margin-top:3px}
 
+  /* CIFRAS */
+  .nums{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);margin-bottom:40px}
+  .nums > div{padding:24px 20px 24px 0;display:flex;flex-direction:column;gap:6px}
+  .nums > div + div{padding-left:20px;border-left:1px solid var(--rule)}
+  .nums b{font-size:clamp(30px,3.4vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--blue)}
+  .nums span{font-size:13.5px;color:var(--muted);max-width:24ch}
+
   /* PROGRAMAS */
   .prog{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
   .card{border:1px solid var(--ink);background:var(--paper);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
@@ -267,6 +280,9 @@
     .status .cell:nth-child(3){padding-left:0;border-left:0}
     .status .cell:nth-child(n+3){border-top:1px solid var(--rule)}
     .tri{grid-template-columns:1fr}
+    .nums{grid-template-columns:repeat(2,1fr)}
+    .nums > div:nth-child(3){padding-left:0;border-left:0}
+    .nums > div:nth-child(n+3){border-top:1px solid var(--rule)}
     .tri article,.tri article + article{padding:28px 0;border-left:0;border-bottom:1px solid var(--rule)}
     .gov{grid-template-columns:repeat(2,1fr)}
     .gov > div:nth-child(2){border-right:0}
@@ -320,8 +336,8 @@
     </a>
     <nav class="main" aria-label="primary">
       <a href="#que-hacemos" class="hide-sm"><span data-es>Qué hacemos</span><span data-en>What we do</span></a>
-      <a href="#modelo" class="hide-sm"><span data-es>Modelo</span><span data-en>Model</span></a>
-      <a href="#programas"><span data-es>Programas</span><span data-en>Programs</span></a>
+      <a href="#tecnologia" class="hide-sm"><span data-es>Tecnología</span><span data-en>Technology</span></a>
+      <a href="#prototipos"><span data-es>Prototipos</span><span data-en>Prototypes</span></a>
       <a href="#gobierno" class="hide-sm"><span data-es>Gobierno</span><span data-en>Governance</span></a>
       <div class="lang" role="tablist" aria-label="Language">
         <button id="lang-es" class="on" role="tab" aria-selected="true">ES</button>
@@ -349,21 +365,20 @@
           <span data-en>We build software and applied artificial intelligence from Santiago, Chile. Our agents run in production around the clock: they observe, decide and execute in real time. Every decision that can't be undone always goes through a person.</span>
         </p>
         <div class="actions">
-          <a href="#programas" class="cta"><span data-es>Ver programas</span><span data-en>See programs</span>
+          <a href="#tecnologia" class="cta"><span data-es>Ver la tecnología</span><span data-en>See the technology</span>
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
           <a href="#contacto" class="cta ghost"><span data-es>Hablemos</span><span data-en>Let's talk</span></a>
         </div>
       </div>
 
       <figure class="spec rv" aria-hidden="true" style="margin:0">
-        <header><span>Schematic · BBT-SR71 · Rev. 5</span><span>Sheet 1/1</span></header>
+        <header><span>Schematic · BBT · Rev. 6</span><span>Sheet 1/1</span></header>
         <div class="plan">
           <svg viewBox="0 0 500 300" fill="none">
             <g stroke="#0B3D91" stroke-width="1" opacity=".35" stroke-dasharray="3 5">
               <path d="M20 150 H480"/><path d="M250 20 V280"/>
             </g>
             <g class="jet" stroke="#0B1020" stroke-width="1.3" stroke-linejoin="round">
-              <!-- SR-71, vista en planta: fuselaje largo con chines, ala delta, dos nacelas -->
               <path d="M455 150 C430 146 385 141 330 138 L300 128 L245 80 L222 80 L235 128 L150 133 L120 104 L104 104 L112 136 L62 140 L62 160 L112 164 L104 196 L120 196 L150 167 L235 172 L222 220 L245 220 L300 172 L330 162 C385 159 430 154 455 150 Z" fill="#FAFAF7"/>
               <ellipse cx="210" cy="104" rx="70" ry="6" fill="#F2F2EC"/>
               <ellipse cx="210" cy="196" rx="70" ry="6" fill="#F2F2EC"/>
@@ -377,8 +392,8 @@
               <path d="M62 244 V256 M455 244 V256"/>
             </g>
             <g font-family="JetBrains Mono, monospace" font-size="10" fill="#0B1020" stroke="none">
-              <text x="22" y="34">BLACKBIRD // PROGRAM 01</text>
-              <text x="22" y="50" fill="#5B6472">CODENAME: SR-71</text>
+              <text x="22" y="34">BLACKBIRD TECH // PLATFORM</text>
+              <text x="22" y="50" fill="#5B6472">CLASS: AUTONOMOUS AGENTS</text>
               <text x="372" y="34" fill="#5B6472">SCALE 1:∞</text>
               <text x="210" y="272" fill="#FC3D21">REACCIÓN &lt; 1 s</text>
             </g>
@@ -511,48 +526,110 @@
   </div>
 </section>
 
-<!-- ===================== 03 PROGRAMAS ===================== -->
-<section class="block" id="programas">
+<!-- ===================== 02 TECNOLOGÍA ===================== -->
+<section class="block" id="tecnologia">
   <div class="wrap">
     <div class="head rv">
-      <div class="num">03 · <span data-es>Programas</span><span data-en>Programs</span></div>
+      <div class="num">03 · <span data-es>Tecnología</span><span data-en>Technology</span></div>
       <div>
-        <h2><span data-es>Programas en vuelo.</span><span data-en>Programs in flight.</span></h2>
-        <p><span data-es>Cada programa nace para resolver un problema de nuestra propia operación. Cuando funciona en producción, se convierte en producto.</span><span data-en>Every program is born to solve a problem in our own operation. Once it works in production, it becomes a product.</span></p>
+        <h2><span data-es>Tecnología propia, probada en producción.</span><span data-en>Our own technology, proven in production.</span></h2>
+        <p><span data-es>Todo lo que ofrecemos corre primero en nuestra propia operación, las 24 horas, con dinero real. Estas son las piezas que construimos y mantenemos nosotros.</span><span data-en>Everything we offer runs first in our own operation, around the clock, with real money. These are the pieces we build and maintain ourselves.</span></p>
       </div>
     </div>
 
+    <div class="nums rv">
+      <div><b>&lt; 1 s</b><span data-es>de dato de mercado a decisión ejecutada</span><span data-en>from market data to executed decision</span></div>
+      <div><b>~2 s</b><span data-es>para detectar y conciliar un abono bancario</span><span data-en>to detect and reconcile a bank deposit</span></div>
+      <div><b>30 min</b><span data-es>entre respaldos cifrados de toda la operación</span><span data-en>between encrypted backups of the whole operation</span></div>
+      <div><b>0</b><span data-es>acciones irreversibles sin una persona que las autorice</span><span data-en>irreversible actions without a person authorizing them</span></div>
+    </div>
+
     <div class="prog">
-      <!-- SR-71 -->
-      <article class="card rv" aria-label="SR-71">
-        <div class="hd"><span>Program · 01</span><span class="state"><i></i><span data-es>En servicio</span><span data-en>In service</span></span></div>
+      <article class="card rv" aria-label="Motor de decisión">
+        <div class="hd"><span>Tech · 01</span><span class="state"><i></i><span data-es>En producción</span><span data-en>In production</span></span></div>
         <div class="illus">
           <svg viewBox="0 0 400 175" fill="none">
             <g stroke="#0B3D91" stroke-width="1" opacity=".25"><path d="M20 140 H380"/></g>
             <path d="M20 120 L60 112 L90 116 L120 96 L150 102 L180 84 L210 90 L240 70 L270 76 L300 58 L330 64 L360 50 L380 54" stroke="#0B3D91" stroke-width="1.6"/>
-            <path d="M20 128 L60 122 L90 124 L120 108 L150 112 L180 96 L210 100 L240 82 L270 88 L300 70 L330 74 L360 62 L380 64" stroke="#FC3D21" stroke-width="1.2" stroke-dasharray="3 3"/>
+            <path d="M20 132 H380" stroke="#FC3D21" stroke-width="1.2" stroke-dasharray="3 3"/>
             <circle cx="380" cy="54" r="3.5" fill="#FC3D21"/>
             <g font-family="JetBrains Mono, monospace" font-size="9" fill="#5B6472">
-              <text x="20" y="24">SR-71 · REAL-TIME MARKETS</text>
+              <text x="20" y="24">DECISION ENGINE · REAL-TIME</text>
               <text x="300" y="24">&lt; 1 s</text>
+              <text x="300" y="150" fill="#FC3D21">FLOOR</text>
             </g>
           </svg>
         </div>
         <div class="body">
           <div class="sub"><span data-es>Mercados en tiempo real</span><span data-en>Real-time markets</span></div>
-          <div class="name">SR-71 Blackbird</div>
-          <p class="desc"><span data-es>Nuestro programa insignia. Agentes que leen el mercado cada segundo, ajustan precio, atienden contrapartes y protegen el margen, mientras el comandante supervisa desde la cabina o el teléfono.</span><span data-en>Our flagship program. Agents that read the market every second, adjust pricing, serve counterparties and protect margin — while the commander supervises from the cockpit or a phone.</span></p>
+          <div class="name"><span data-es>Motor de decisión</span><span data-en>Decision engine</span></div>
+          <p class="desc"><span data-es>Lee el mercado cada segundo, calcula la mejor posición y la ejecuta en menos de un segundo. Los pisos de seguridad, los cupos y los límites de cada contraparte viven en el código: el motor nunca opera bajo costo ni más allá de lo autorizado.</span><span data-en>Reads the market every second, computes the best position and executes it in under a second. Safety floors, quotas and each counterparty's limits live in code: the engine never operates below cost or beyond what's authorized.</span></p>
           <dl>
-            <dt><span data-es>Rol</span><span data-en>Role</span></dt><dd><span data-es>Operación autónoma supervisada</span><span data-en>Supervised autonomous operation</span></dd>
             <dt><span data-es>Ritmo</span><span data-en>Pace</span></dt><dd><span data-es>Decisión en menos de 1 segundo</span><span data-en>Decisions in under 1 second</span></dd>
+            <dt><span data-es>Seguridad</span><span data-en>Safety</span></dt><dd><span data-es>Pisos y topes duros en código</span><span data-en>Hard floors and caps in code</span></dd>
             <dt><span data-es>Estado</span><span data-en>Status</span></dt><dd><span data-es>En producción 24/7</span><span data-en>In production 24/7</span></dd>
           </dl>
         </div>
       </article>
 
-      <!-- Cabina -->
+      <article class="card rv" aria-label="Agentes conversacionales">
+        <div class="hd"><span>Tech · 02</span><span class="state"><i></i><span data-es>En producción</span><span data-en>In production</span></span></div>
+        <div class="illus">
+          <svg viewBox="0 0 400 175" fill="none" stroke="#0B1020" stroke-width="1.1">
+            <rect x="70" y="44" width="150" height="34" rx="4" fill="#FAFAF7"/>
+            <path d="M84 56 H190 M84 66 H160" stroke="#5B6472" opacity=".7"/>
+            <rect x="180" y="92" width="150" height="34" rx="4" fill="#0B3D91" stroke="none"/>
+            <path d="M194 104 H310 M194 114 H280" stroke="#FAFAF7" opacity=".85"/>
+            <circle cx="330" cy="92" r="3.5" fill="#FC3D21" stroke="none"/>
+            <rect x="70" y="138" width="60" height="18" rx="9" stroke-dasharray="3 3" opacity=".6"/>
+            <g font-family="JetBrains Mono, monospace" font-size="9" fill="#5B6472" stroke="none"><text x="40" y="24">LOCAL LLM · CONVERSATION</text></g>
+          </svg>
+        </div>
+        <div class="body">
+          <div class="sub"><span data-es>Atención con criterio</span><span data-en>Service with judgment</span></div>
+          <div class="name"><span data-es>Agentes conversacionales</span><span data-en>Conversational agents</span></div>
+          <p class="desc"><span data-es>Un modelo de lenguaje que corre en nuestros propios equipos lee cada conversación completa y decide qué responder. El código protege lo crítico: los datos sensibles salen solo de plantillas verificadas, nunca inventa cifras y le pasa el caso a una persona cuando duda.</span><span data-en>A language model running on our own hardware reads each full conversation and decides how to reply. Code guards what's critical: sensitive data only comes from verified templates, it never makes up figures, and it hands the case to a person when in doubt.</span></p>
+          <dl>
+            <dt><span data-es>Modelo</span><span data-en>Model</span></dt><dd><span data-es>Local: la conversación no sale de casa</span><span data-en>Local: conversations stay in-house</span></dd>
+            <dt><span data-es>Respuesta</span><span data-en>Reply</span></dt><dd><span data-es>2 a 3 segundos</span><span data-en>2 to 3 seconds</span></dd>
+            <dt><span data-es>Límite</span><span data-en>Limit</span></dt><dd><span data-es>Escala a una persona cuando duda</span><span data-en>Escalates to a person when unsure</span></dd>
+          </dl>
+        </div>
+      </article>
+
+      <article class="card rv" aria-label="Conciliación">
+        <div class="hd"><span>Tech · 03</span><span class="state"><i></i><span data-es>En producción</span><span data-en>In production</span></span></div>
+        <div class="illus">
+          <svg viewBox="0 0 400 175" fill="none" stroke="#0B1020" stroke-width="1.1">
+            <rect x="50" y="50" width="110" height="76" fill="#FAFAF7"/>
+            <path d="M62 66 H148 M62 82 H130 M62 98 H142 M62 114 H120" stroke="#5B6472" opacity=".6"/>
+            <rect x="240" y="50" width="110" height="76" fill="#FAFAF7"/>
+            <path d="M252 66 H338 M252 82 H320 M252 98 H332 M252 114 H310" stroke="#5B6472" opacity=".6"/>
+            <path d="M160 82 H240" stroke="#0B3D91" stroke-width="1.6"/>
+            <path d="M232 76 L240 82 L232 88" stroke="#0B3D91" stroke-width="1.6"/>
+            <circle cx="200" cy="82" r="11" fill="#FAFAF7" stroke="#0B3D91"/>
+            <path d="M194 82 L198 86 L206 77" stroke="#0B3D91" stroke-width="1.6"/>
+            <circle cx="350" cy="50" r="3.5" fill="#FC3D21" stroke="none"/>
+            <g font-family="JetBrains Mono, monospace" font-size="9" fill="#5B6472" stroke="none">
+              <text x="40" y="24">BANK ↔ LEDGER · AUTO-MATCH</text>
+              <text x="186" y="112">~2 s</text>
+            </g>
+          </svg>
+        </div>
+        <div class="body">
+          <div class="sub"><span data-es>Tesorería y contabilidad</span><span data-en>Treasury and accounting</span></div>
+          <div class="name"><span data-es>Conciliación en segundos</span><span data-en>Reconciliation in seconds</span></div>
+          <p class="desc"><span data-es>Cada abono bancario se detecta a los pocos segundos de llegar y se empareja solo con la operación que corresponde. El costo por lote, los márgenes y los documentos tributarios electrónicos salen de esos mismos datos, listos para la contabilidad.</span><span data-en>Every bank deposit is detected seconds after it lands and matched automatically to the right operation. Lot costs, margins and electronic tax documents come from that same data, ready for accounting.</span></p>
+          <dl>
+            <dt><span data-es>Detección</span><span data-en>Detection</span></dt><dd><span data-es>~2 segundos por abono</span><span data-en>~2 seconds per deposit</span></dd>
+            <dt><span data-es>Contabilidad</span><span data-en>Accounting</span></dt><dd><span data-es>Costo real por lote, margen por operación</span><span data-en>Real cost per lot, margin per operation</span></dd>
+            <dt>SII</dt><dd><span data-es>Documentos tributarios electrónicos</span><span data-en>Electronic tax documents</span></dd>
+          </dl>
+        </div>
+      </article>
+
       <article class="card rv" aria-label="Cabina">
-        <div class="hd"><span>Program · 02</span><span class="state"><i></i><span data-es>En servicio</span><span data-en>In service</span></span></div>
+        <div class="hd"><span>Tech · 04</span><span class="state"><i></i><span data-es>En producción</span><span data-en>In production</span></span></div>
         <div class="illus">
           <svg viewBox="0 0 400 175" fill="none" stroke="#0B1020" stroke-width="1.1">
             <rect x="40" y="40" width="96" height="56" fill="#FAFAF7"/><rect x="152" y="40" width="96" height="56" fill="#FAFAF7"/><rect x="264" y="40" width="96" height="56" fill="#FAFAF7"/>
@@ -565,44 +642,35 @@
           </svg>
         </div>
         <div class="body">
-          <div class="sub"><span data-es>Plataforma de mando</span><span data-en>Command platform</span></div>
-          <div class="name"><span data-es>Cabina</span><span data-en>Cockpit</span></div>
-          <p class="desc"><span data-es>El centro de control de la empresa: telemetría en vivo, tesorería, conciliación bancaria, contabilidad y emisión tributaria en un solo lugar, en el navegador y en una app nativa para iPhone.</span><span data-en>The company's control center: live telemetry, treasury, bank reconciliation, accounting and tax filing in one place — in the browser and in a native iPhone app.</span></p>
+          <div class="sub"><span data-es>Mando y vigilancia</span><span data-en>Command and monitoring</span></div>
+          <div class="name"><span data-es>Cabina de mando</span><span data-en>Command cockpit</span></div>
+          <p class="desc"><span data-es>Panel web y app nativa para iPhone con telemetría en vivo, alertas y acciones protegidas con Face ID o PIN. Detrás, vigilantes que reinician lo que se cae solo y respaldos cifrados de toda la operación.</span><span data-en>Web dashboard and native iPhone app with live telemetry, alerts and actions protected by Face ID or PIN. Behind it, watchdogs that restart whatever goes down and encrypted backups of the whole operation.</span></p>
           <dl>
-            <dt><span data-es>Rol</span><span data-en>Role</span></dt><dd><span data-es>Mando, finanzas y cumplimiento</span><span data-en>Command, finance and compliance</span></dd>
             <dt><span data-es>Acceso</span><span data-en>Access</span></dt><dd><span data-es>Web + iPhone · doble factor</span><span data-en>Web + iPhone · two-factor</span></dd>
-            <dt><span data-es>Estado</span><span data-en>Status</span></dt><dd><span data-es>En producción</span><span data-en>In production</span></dd>
+            <dt><span data-es>Acciones</span><span data-en>Actions</span></dt><dd><span data-es>Face ID o PIN en lo crítico</span><span data-en>Face ID or PIN on critical actions</span></dd>
+            <dt><span data-es>Respaldo</span><span data-en>Backup</span></dt><dd><span data-es>Cifrado, cada 30 minutos</span><span data-en>Encrypted, every 30 minutes</span></dd>
           </dl>
         </div>
       </article>
 
-      <!-- Sheriff -->
-      <article class="card rv" aria-label="Sheriff">
-        <div class="hd"><span>Program · 03</span><span class="state"><i></i><span data-es>En servicio</span><span data-en>In service</span></span></div>
-        <div class="illus">
-          <svg viewBox="0 0 400 175" fill="none" stroke="#0B1020" stroke-width="1.1">
-            <path d="M200 30 L250 48 V92 C250 120 228 138 200 148 C172 138 150 120 150 92 V48 Z" fill="#FAFAF7"/>
-            <path d="M178 90 L195 106 L224 74" stroke="#0B3D91" stroke-width="2"/>
-            <g stroke="#0B3D91" opacity=".5"><path d="M60 60 H120 M60 76 H110 M60 92 H118"/><path d="M280 60 H340 M290 76 H340 M282 92 H340"/></g>
-            <circle cx="250" cy="48" r="3.5" fill="#FC3D21" stroke="none"/>
-            <g font-family="JetBrains Mono, monospace" font-size="9" fill="#5B6472" stroke="none"><text x="40" y="24">SHERIFF · RISK &amp; COMPLIANCE</text></g>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="sub"><span data-es>Riesgo y cumplimiento</span><span data-en>Risk &amp; compliance</span></div>
-          <div class="name">Sheriff</div>
-          <p class="desc"><span data-es>Evaluación de contrapartes: identidad, riesgo y antecedentes consolidados en un informe claro, para decidir con quién se opera y documentar por qué.</span><span data-en>Counterparty assessment: identity, risk and background consolidated into one clear report — to decide who to work with and document why.</span></p>
-          <dl>
-            <dt><span data-es>Rol</span><span data-en>Role</span></dt><dd><span data-es>Debida diligencia de contrapartes</span><span data-en>Counterparty due diligence</span></dd>
-            <dt><span data-es>Salida</span><span data-en>Output</span></dt><dd><span data-es>Informe auditable por contraparte</span><span data-en>Auditable report per counterparty</span></dd>
-            <dt><span data-es>Estado</span><span data-en>Status</span></dt><dd><span data-es>En uso interno</span><span data-en>In internal use</span></dd>
-          </dl>
-        </div>
-      </article>
+    </div>
+  </div>
+</section>
 
-      <!-- TRISTAR -->
+<!-- ===================== 03 PROTOTIPOS ===================== -->
+<section class="block" id="prototipos">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="num">04 · <span data-es>Prototipos</span><span data-en>Prototypes</span></div>
+      <div>
+        <h2><span data-es>Lo que viene: negocios de barrio con tecnología de punta.</span><span data-en>What's next: neighborhood businesses with cutting-edge technology.</span></h2>
+        <p><span data-es>Tomamos lo que ya funciona en nuestra operación y lo convertimos en productos para negocios reales. Los dos primeros están en prueba y buscamos locales piloto.</span><span data-en>We take what already works in our operation and turn it into products for real businesses. The first two are in testing and we're looking for pilot locations.</span></p>
+      </div>
+    </div>
+
+    <div class="prog">
       <article class="card rv" aria-label="TRISTAR">
-        <div class="hd"><span>Program · 04</span><span class="state dev"><i></i><span data-es>En desarrollo</span><span data-en>In development</span></span></div>
+        <div class="hd"><span>Prototype · TRISTAR</span><span class="state dev"><i></i><span data-es>En prueba</span><span data-en>In testing</span></span></div>
         <div class="illus">
           <svg viewBox="0 0 400 175" fill="none" stroke="#0B1020" stroke-width="1.1">
             <rect x="120" y="40" width="160" height="96" rx="6" fill="#FAFAF7"/>
@@ -616,11 +684,38 @@
         <div class="body">
           <div class="sub"><span data-es>Restaurantes</span><span data-en>Restaurants</span></div>
           <div class="name">TRISTAR</div>
-          <p class="desc"><span data-es>Sistema de ventas y gestión para restaurantes que funciona aunque se caiga internet, con boleta electrónica integrada e inteligencia del negocio a partir de lo que realmente se vende.</span><span data-en>Point-of-sale and management system for restaurants that keeps working when the internet goes down, with built-in electronic receipts and business intelligence from what actually sells.</span></p>
+          <p class="desc"><span data-es>El jefe de operaciones del restaurante. Sala con el plano real del local, carta, cobro y cierre de caja, más un guardián que mira las ventas y avisa antes de que se pierda el margen: punto de equilibrio, costo real por plato y turnos dentro de lo que permite la ley.</span><span data-en>The restaurant's head of operations. Floor plan of the actual venue, menu, checkout and cash closing — plus a guardian that watches sales and warns before margin slips: break-even point, real cost per dish and shifts within legal limits.</span></p>
           <dl>
-            <dt><span data-es>Rol</span><span data-en>Role</span></dt><dd><span data-es>Punto de venta + gestión</span><span data-en>Point of sale + management</span></dd>
-            <dt><span data-es>Principio</span><span data-en>Principle</span></dt><dd><span data-es>Primero local: la venta nunca se detiene</span><span data-en>Local-first: sales never stop</span></dd>
-            <dt><span data-es>Estado</span><span data-en>Status</span></dt><dd><span data-es>Buscando restaurantes piloto</span><span data-en>Looking for pilot restaurants</span></dd>
+            <dt><span data-es>Para</span><span data-en>For</span></dt><dd><span data-es>Dueños, garzones y cocina</span><span data-en>Owners, waiters and kitchen</span></dd>
+            <dt><span data-es>Principio</span><span data-en>Principle</span></dt><dd><span data-es>Funciona aunque se caiga internet</span><span data-en>Keeps working when the internet drops</span></dd>
+            <dt><span data-es>Estado</span><span data-en>Status</span></dt><dd><span data-es>Prototipo · buscando restaurantes piloto</span><span data-en>Prototype · looking for pilot restaurants</span></dd>
+          </dl>
+        </div>
+      </article>
+
+      <article class="card rv" aria-label="A10">
+        <div class="hd"><span>Prototype · A10</span><span class="state dev"><i></i><span data-es>En prueba</span><span data-en>In testing</span></span></div>
+        <div class="illus">
+          <svg viewBox="0 0 400 175" fill="none" stroke="#0B1020" stroke-width="1.1">
+            <rect x="110" y="34" width="62" height="112" rx="10" fill="#FAFAF7"/>
+            <rect x="118" y="46" width="46" height="80" rx="2" stroke="#0B3D91"/>
+            <circle cx="141" cy="136" r="3"/>
+            <path d="M126 62 H156 M126 74 H150 M126 86 H154" stroke="#0B3D91" opacity=".6"/>
+            <rect x="200" y="46" width="96" height="24" fill="#FAFAF7"/><rect x="200" y="78" width="96" height="24" fill="#FAFAF7"/><rect x="200" y="110" width="96" height="24" fill="#FAFAF7"/>
+            <circle cx="214" cy="58" r="4" fill="#1F8A4C" stroke="none"/><circle cx="214" cy="90" r="4" fill="#E8A33D" stroke="none"/><circle cx="214" cy="122" r="4" fill="#0B3D91" stroke="none"/>
+            <path d="M226 58 H282 M226 90 H270 M226 122 H276" stroke="#5B6472" opacity=".6"/>
+            <circle cx="296" cy="46" r="3.5" fill="#FC3D21" stroke="none"/>
+            <g font-family="JetBrains Mono, monospace" font-size="9" fill="#5B6472" stroke="none"><text x="40" y="24">A10 · COUNTER + REPAIR SHOP</text></g>
+          </svg>
+        </div>
+        <div class="body">
+          <div class="sub"><span data-es>Locales de celulares y servicio técnico</span><span data-en>Phone stores and repair shops</span></div>
+          <div class="name">A10</div>
+          <p class="desc"><span data-es>Caja y taller en una sola pantalla. Venta de equipos, accesorios y repuestos con control por IMEI, órdenes de servicio desde que el equipo llega hasta que se entrega, y un mapa del taller con técnicos y semáforo. Los locales pueden mostrarse su stock entre ellos, sin comisión.</span><span data-en>Checkout and repair shop on one screen. Sales of phones, accessories and parts tracked by IMEI, service orders from drop-off to pickup, and a workshop map with technicians and status lights. Stores can share stock with each other, commission-free.</span></p>
+          <dl>
+            <dt><span data-es>Para</span><span data-en>For</span></dt><dd><span data-es>Mostrador y técnicos</span><span data-en>Counter staff and technicians</span></dd>
+            <dt><span data-es>Principio</span><span data-en>Principle</span></dt><dd><span data-es>La venta no espera a nadie, ni a internet</span><span data-en>Sales wait for no one — not even the internet</span></dd>
+            <dt><span data-es>Estado</span><span data-en>Status</span></dt><dd><span data-es>Prototipo · buscando locales piloto</span><span data-en>Prototype · looking for pilot stores</span></dd>
           </dl>
         </div>
       </article>
@@ -632,7 +727,7 @@
 <section class="block" id="gobierno">
   <div class="wrap">
     <div class="head rv">
-      <div class="num">04 · <span data-es>Gobierno</span><span data-en>Governance</span></div>
+      <div class="num">05 · <span data-es>Gobierno</span><span data-en>Governance</span></div>
       <div>
         <h2><span data-es>Automatización con responsabilidad.</span><span data-en>Automation with accountability.</span></h2>
         <p><span data-es>Para bancos, proveedores y contrapartes: así controlamos lo que nuestros agentes hacen.</span><span data-en>For banks, suppliers and counterparties: this is how we control what our agents do.</span></p>
@@ -648,7 +743,7 @@
       <div>
         <div class="k">G.02</div>
         <div class="t"><span data-es>Registro auditable</span><span data-en>Audit trail</span></div>
-        <div class="d"><span data-es>Cada operación queda registrada con fecha, monto, contraparte y quién la autorizó.</span><span data-en>Every operation is recorded with date, amount, counterparty and who authorized it.</span></div>
+        <div class="d"><span data-es>Cada operación queda registrada con fecha, monto, contraparte y quién la autorizó. Las contrapartes se verifican con proveedores especializados.</span><span data-en>Every operation is recorded with date, amount, counterparty and who authorized it. Counterparties are verified through specialized providers.</span></div>
       </div>
       <div>
         <div class="k">G.03</div>
@@ -674,7 +769,7 @@
 <section class="block vision" id="vision">
   <div class="wrap">
     <div class="head rv">
-      <div class="num">05 · <span data-es>Visión</span><span data-en>Vision</span></div>
+      <div class="num">06 · <span data-es>Visión</span><span data-en>Vision</span></div>
       <div>
         <p class="quote"><span data-es>La primera empresa de Latinoamérica que <em>se construye a sí misma</em>.</span><span data-en>The first company in Latin America that <em>builds itself</em>.</span></p>
         <p><span data-es>No queremos más gente haciendo trabajo repetitivo: queremos que cada persona tenga detrás un equipo de agentes que ejecute, vigile y aprenda.</span><span data-en>We don't want more people doing repetitive work: we want every person backed by a team of agents that execute, monitor and learn.</span></p>
@@ -689,7 +784,7 @@
       <div>
         <div class="k"><span data-es>Siguiente</span><span data-en>Next</span></div>
         <div class="t"><span data-es>Productos para otros</span><span data-en>Products for others</span></div>
-        <div class="d"><span data-es>Lo que probamos en casa, disponible para negocios reales: restaurantes primero.</span><span data-en>What we proved at home, available to real businesses — restaurants first.</span></div>
+        <div class="d"><span data-es>TRISTAR para restaurantes y A10 para locales de celulares, probándose en negocios reales.</span><span data-en>TRISTAR for restaurants and A10 for phone stores, being tested in real businesses.</span></div>
       </div>
       <div>
         <div class="k"><span data-es>Horizonte</span><span data-en>Horizon</span></div>
@@ -704,17 +799,17 @@
 <section class="block" id="contacto">
   <div class="wrap">
     <div class="head rv">
-      <div class="num">06 · <span data-es>Contacto</span><span data-en>Contact</span></div>
+      <div class="num">07 · <span data-es>Contacto</span><span data-en>Contact</span></div>
       <div>
         <h2><span data-es>Hablemos.</span><span data-en>Let's talk.</span></h2>
       </div>
     </div>
     <div class="contact">
-      <p class="big rv"><span data-es>Clientes, restaurantes interesados en ser piloto de TRISTAR, bancos, proveedores e inversionistas: escríbenos. Respondemos en menos de 2 días hábiles.</span><span data-en>Clients, restaurants interested in piloting TRISTAR, banks, suppliers and investors: write to us. We reply within 2 business days.</span></p>
+      <p class="big rv"><span data-es>Clientes, restaurantes y locales que quieran ser piloto, bancos, proveedores e inversionistas: escríbenos. Respondemos en menos de 2 días hábiles.</span><span data-en>Clients, restaurants and stores that want to pilot, banks, suppliers and investors: write to us. We reply within 2 business days.</span></p>
       <ul class="channels rv">
-        <li><span class="k"><span data-es>General</span><span data-en>General</span></span><a href="mailto:contacto@blackbirdtech.cl">contacto@blackbirdtech.cl</a></li>
-        <li><span class="k"><span data-es>Proveedores</span><span data-en>Suppliers</span></span><a href="mailto:proveedores@blackbirdtech.cl">proveedores@blackbirdtech.cl</a></li>
-        <li><span class="k"><span data-es>Pilotos TRISTAR</span><span data-en>TRISTAR pilots</span></span><a href="mailto:contacto@blackbirdtech.cl?subject=Piloto%20TRISTAR">contacto@blackbirdtech.cl</a></li>
+        <li><span class="k"><span data-es>Contacto</span><span data-en>Contact</span></span><a href="mailto:ops@blackbirdtech.cl">ops@blackbirdtech.cl</a></li>
+        <li><span class="k"><span data-es>Piloto TRISTAR</span><span data-en>TRISTAR pilot</span></span><a href="mailto:ops@blackbirdtech.cl?subject=Piloto%20TRISTAR"><span data-es>Quiero probarlo en mi restaurante</span><span data-en>I want to try it in my restaurant</span></a></li>
+        <li><span class="k"><span data-es>Piloto A10</span><span data-en>A10 pilot</span></span><a href="mailto:ops@blackbirdtech.cl?subject=Piloto%20A10"><span data-es>Quiero probarlo en mi local</span><span data-en>I want to try it in my store</span></a></li>
         <li><span class="k"><span data-es>Oficina</span><span data-en>Office</span></span><span>Santiago, Chile</span></li>
       </ul>
     </div>
@@ -741,10 +836,10 @@
       <div>
         <h4><span data-es>Programas</span><span data-en>Programs</span></h4>
         <ul>
-          <li><a href="#programas">SR-71 Blackbird</a></li>
-          <li><a href="#programas"><span data-es>Cabina</span><span data-en>Cockpit</span></a></li>
-          <li><a href="#programas">Sheriff</a></li>
-          <li><a href="#programas">TRISTAR</a></li>
+          <li><a href="#tecnologia"><span data-es>Motor de decisión</span><span data-en>Decision engine</span></a></li>
+          <li><a href="#tecnologia"><span data-es>Agentes conversacionales</span><span data-en>Conversational agents</span></a></li>
+          <li><a href="#prototipos">TRISTAR</a></li>
+          <li><a href="#prototipos">A10</a></li>
         </ul>
       </div>
       <div>
@@ -759,7 +854,7 @@
       <div>
         <h4><span data-es>Contacto</span><span data-en>Contact</span></h4>
         <ul>
-          <li><a href="mailto:contacto@blackbirdtech.cl">contacto@blackbirdtech.cl</a></li>
+          <li><a href="mailto:ops@blackbirdtech.cl">ops@blackbirdtech.cl</a></li>
           <li>Santiago, Chile</li>
         </ul>
       </div>
