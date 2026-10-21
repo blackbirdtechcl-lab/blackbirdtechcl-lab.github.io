@@ -3,857 +3,152 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<meta name="color-scheme" content="light" />
-<title>Blackbird Tech — Una empresa construida por agentes · Santiago, Chile</title>
-<meta name="description" content="Blackbird Tech SpA desarrolla software e inteligencia artificial aplicada desde Santiago de Chile. Agentes autónomos en producción 24/7, con control humano en cada decisión irreversible." />
-<meta name="author" content="Blackbird Tech SpA" />
+<title>Blackbird Tech — A10 y software para operar</title>
+<meta name="description" content="A10, la caja de un local de celulares. Cobra aunque se caiga la red. Blackbird Tech, Santiago." />
 <link rel="canonical" href="https://blackbirdtech.cl/" />
-<meta property="og:title" content="Blackbird Tech — Una empresa construida por agentes" />
-<meta property="og:description" content="Software e IA aplicada desde Santiago de Chile. Agentes en producción 24/7, con control humano en cada decisión irreversible." />
+<meta property="og:title" content="Blackbird Tech — A10" />
+<meta property="og:description" content="La caja que baja al mostrador y aguanta el golpe. Cobra, cierra, sigue." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blackbirdtech.cl/" />
-<meta property="og:site_name" content="Blackbird Tech" />
-<meta property="og:locale" content="es_CL" />
 <meta property="og:image" content="https://blackbirdtech.cl/og.png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Blackbird Tech — Una empresa construida por agentes. Operada por un humano." />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://blackbirdtech.cl/og.png" />
-<meta name="theme-color" content="#FAFAF7" />
+<meta name="theme-color" content="#09090b" />
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230B1020'/%3E%3Cpath d='M8 33 L30 29 L40 20 L44 20 L42 29 L56 32 L42 35 L44 44 L40 44 L30 35 Z' fill='%23FAFAF7'/%3E%3Ccircle cx='50' cy='32' r='2' fill='%23FC3D21'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Blackbird Tech SpA","url":"https://blackbirdtech.cl/","email":"ops@blackbirdtech.cl","address":{"@type":"PostalAddress","addressLocality":"Santiago","addressCountry":"CL"},"description":"Desarrollo de software e I+D en inteligencia artificial aplicada."}
-</script>
-<style>
-  :root{
-    --ink:#0B1020;
-    --ink-2:#1A2233;
-    --paper:#FAFAF7;
-    --paper-2:#F2F2EC;
-    --paper-3:#E9E9E1;
-    --rule:#D8D8D0;
-    --muted:#5B6472;
-    --blue:#0B3D91;
-    --red:#FC3D21;
-    --ok:#1F8A4C;
-    --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-    --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0;padding:0}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  body{
-    font-family:var(--sans);color:var(--ink);background:var(--paper);
-    font-size:16px;line-height:1.6;font-feature-settings:"ss01","cv11";
-    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
-  }
-  a{color:inherit;text-decoration:none}
-  img,svg{display:block;max-width:100%}
-  ::selection{background:var(--blue);color:#fff}
-  :focus-visible{outline:2px solid var(--blue);outline-offset:3px}
-
-  .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
-  .mono{font-family:var(--mono);letter-spacing:.02em}
-  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
-
-  /* i18n: cada texto existe en ES y EN; se oculta el que no corresponde */
-  html:not([data-lang="en"]) [data-en]{display:none !important}
-  html[data-lang="en"] [data-es]{display:none !important}
-
-  /* ============ CLASS BAR ============ */
-  .classbar{
-    font-family:var(--mono);font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;
-    background:var(--ink);color:#C9CCD3;
-  }
-  .classbar .wrap{display:flex;justify-content:space-between;align-items:center;height:34px;gap:16px}
-  .classbar b{color:#fff;font-weight:600}
-  .live{display:inline-flex;align-items:center;gap:8px}
-  .live i{width:7px;height:7px;border-radius:50%;background:#3DDC84;box-shadow:0 0 0 0 rgba(61,220,132,.6);animation:pulse 2.4s infinite}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(61,220,132,.55)}70%{box-shadow:0 0 0 8px rgba(61,220,132,0)}100%{box-shadow:0 0 0 0 rgba(61,220,132,0)}}
-
-  /* ============ TOP BAR ============ */
-  .topbar{
-    position:sticky;top:0;z-index:50;background:rgba(250,250,247,.88);
-    backdrop-filter:saturate(160%) blur(10px);-webkit-backdrop-filter:saturate(160%) blur(10px);
-    border-bottom:1px solid transparent;transition:border-color .2s;
-  }
-  .topbar.scrolled{border-bottom-color:var(--rule)}
-  .topbar .row{display:flex;align-items:center;gap:28px;height:68px}
-  .brand{display:flex;align-items:center;gap:12px}
-  .brand .mark{width:34px;height:34px}
-  .brand .name{font-weight:800;font-size:15px;letter-spacing:.06em;line-height:1.1}
-  .brand .name small{display:block;font-family:var(--mono);font-weight:500;font-size:9.5px;color:var(--muted);letter-spacing:.24em;margin-top:3px}
-  nav.main{margin-left:auto;display:flex;gap:28px;align-items:center}
-  nav.main a{font-size:13.5px;color:var(--ink-2);opacity:.8;transition:opacity .15s}
-  nav.main a:hover{opacity:1}
-  nav.main a.cta{color:var(--paper);opacity:1;padding:9px 18px}
-  .lang{display:inline-flex;border:1px solid var(--ink);border-radius:999px;overflow:hidden;font-family:var(--mono);font-size:11px}
-  .lang button{background:transparent;border:0;padding:6px 11px;cursor:pointer;color:var(--ink);font-family:var(--mono);letter-spacing:.14em}
-  .lang button.on{background:var(--ink);color:var(--paper)}
-  .cta{
-    display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);
-    padding:12px 20px;border-radius:999px;font-weight:600;font-size:14px;transition:transform .15s,background .15s;
-  }
-  .cta:hover{background:var(--blue);transform:translateY(-1px)}
-  .cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
-  .cta.ghost:hover{background:var(--ink);color:var(--paper)}
-  .cta svg{width:14px;height:14px}
-
-  /* ============ HERO ============ */
-  .hero{padding:88px 0 0;position:relative}
-  .hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
-  .hero h1{
-    font-size:clamp(42px,6.2vw,86px);line-height:.98;letter-spacing:-.035em;
-    margin:22px 0 26px;font-weight:800;
-  }
-  .hero h1 em{font-style:normal;color:var(--blue)}
-  .hero h1 .r{color:var(--red)}
-  .lede{font-size:19px;max-width:54ch;color:var(--ink-2);margin:0}
-  .hero .actions{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
-
-  .spec{
-    position:relative;border:1px solid var(--ink);background:var(--paper);
-    box-shadow:12px 12px 0 var(--paper-3);
-  }
-  .spec header{
-    display:flex;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--ink);
-    font-family:var(--mono);font-size:9.5px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase;
-  }
-  .spec .plan{
-    aspect-ratio:5/3;position:relative;
-    background:
-      repeating-linear-gradient(0deg,transparent 0 19px,rgba(11,61,145,.07) 19px 20px),
-      repeating-linear-gradient(90deg,transparent 0 19px,rgba(11,61,145,.07) 19px 20px),
-      var(--paper-2);
-  }
-  .spec .plan svg{position:absolute;inset:0;width:100%;height:100%}
-  .spec .plan .jet{animation:drift 9s ease-in-out infinite}
-  @keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
-  .spec dl{display:grid;grid-template-columns:1fr 1fr;margin:0;border-top:1px solid var(--ink)}
-  .spec dl > div{padding:12px 14px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-  .spec dl > div:nth-child(2n){border-right:0}
-  .spec dl > div:nth-last-child(-n+2){border-bottom:0}
-  .spec dt{font-family:var(--mono);font-size:9.5px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase}
-  .spec dd{margin:3px 0 0;font-weight:700;font-size:15px;letter-spacing:-.01em}
-  .stamp{
-    position:absolute;top:52px;right:18px;transform:rotate(7deg);
-    border:2px solid var(--red);color:var(--red);font-family:var(--mono);font-weight:700;
-    font-size:10.5px;letter-spacing:.22em;padding:5px 9px;opacity:.85;background:rgba(250,250,247,.6);
-  }
-
-  /* status strip */
-  .status{margin-top:80px;border-top:1px solid var(--ink);border-bottom:1px solid var(--rule)}
-  .status .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
-  .status .cell{padding:22px 20px 22px 0;display:flex;gap:12px;align-items:flex-start}
-  .status .cell + .cell{padding-left:20px;border-left:1px solid var(--rule)}
-  .status .ok{flex:none;margin-top:6px;width:8px;height:8px;border-radius:50%;background:var(--ok)}
-  .status .t{font-weight:600;font-size:14.5px;line-height:1.35}
-  .status .d{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;margin-top:4px}
-
-  /* ============ SECTIONS ============ */
-  section.block{padding:104px 0;border-bottom:1px solid var(--rule)}
-  .head{display:grid;grid-template-columns:200px 1fr;gap:32px;margin-bottom:56px;align-items:start}
-  .head .num{font-family:var(--mono);font-size:11px;letter-spacing:.26em;color:var(--red);padding-top:12px;text-transform:uppercase}
-  .head h2{font-size:clamp(30px,3.8vw,50px);line-height:1.04;margin:0;letter-spacing:-.025em;font-weight:800;max-width:20ch}
-  .head p{margin:18px 0 0;font-size:17px;color:var(--ink-2);max-width:60ch}
-
-  /* QUÉ HACEMOS */
-  .tri{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
-  .tri article{padding:32px 28px 8px 0}
-  .tri article + article{padding-left:28px;border-left:1px solid var(--rule)}
-  .tri .ico{width:44px;height:44px;margin-bottom:22px}
-  .tri h3{font-size:21px;margin:0 0 10px;letter-spacing:-.01em}
-  .tri p{margin:0;color:var(--ink-2);font-size:15px}
-  .tri ul{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:6px}
-  .tri li{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--muted);padding-left:16px;position:relative}
-  .tri li::before{content:"";position:absolute;left:0;top:7px;width:7px;height:1px;background:var(--red)}
-
-  /* MODELO */
-  .model{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:start}
-  .chain{border:1px solid var(--ink);background:var(--paper-2);padding:28px}
-  .chain .node{display:flex;align-items:center;gap:16px;background:var(--paper);border:1px solid var(--ink);padding:16px 18px}
-  .chain .node.human{background:var(--ink);color:var(--paper)}
-  .chain .node b{font-size:15px}
-  .chain .node small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.18em;opacity:.7;text-transform:uppercase;margin-top:2px}
-  .chain .node .badge{margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.18em;padding:3px 8px;border:1px solid currentColor;text-transform:uppercase;white-space:nowrap}
-  .chain .link{height:34px;margin-left:30px;border-left:1px dashed var(--ink);display:flex;align-items:center;padding-left:14px}
-  .chain .link span{font-family:var(--mono);font-size:9.5px;line-height:1;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;white-space:nowrap}
-  .chain .agents{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-  .chain .agents .node{padding:12px 14px}
-  .rules{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
-  .rules li{display:grid;grid-template-columns:56px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--rule)}
-  .rules .k{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--red);padding-top:4px}
-  .rules .t{font-weight:700;font-size:17px;letter-spacing:-.005em}
-  .rules .d{color:var(--muted);font-size:14.5px;margin-top:3px}
-
-  /* CIFRAS */
-  .nums{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);margin-bottom:40px}
-  .nums > div{padding:24px 20px 24px 0;display:flex;flex-direction:column;gap:6px}
-  .nums > div + div{padding-left:20px;border-left:1px solid var(--rule)}
-  .nums b{font-size:clamp(30px,3.4vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--blue)}
-  .nums span{font-size:13.5px;color:var(--muted);max-width:24ch}
-
-  /* PROGRAMAS */
-  .prog{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-  .card{border:1px solid var(--ink);background:var(--paper);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
-  .card:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--ink)}
-  .card .hd{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase}
-  .state{display:inline-flex;align-items:center;gap:7px}
-  .state i{width:7px;height:7px;border-radius:50%;background:#3DDC84}
-  .state.dev i{background:#E8A33D}
-  .card .illus{
-    aspect-ratio:16/7;position:relative;border-bottom:1px solid var(--ink);
-    background:
-      repeating-linear-gradient(0deg,transparent 0 19px,rgba(11,61,145,.07) 19px 20px),
-      repeating-linear-gradient(90deg,transparent 0 19px,rgba(11,61,145,.07) 19px 20px),
-      var(--paper-2);
-  }
-  .card .illus svg{position:absolute;inset:0;width:100%;height:100%}
-  .card .body{padding:24px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
-  .card .sub{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.2em;text-transform:uppercase}
-  .card .name{font-size:26px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
-  .card .desc{font-size:15px;color:var(--ink-2);margin:0}
-  .card dl{margin:auto 0 0;padding-top:14px;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:13px;border-top:1px dashed var(--rule)}
-  .card dt{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.2em;align-self:center;text-transform:uppercase}
-  .card dd{margin:0;color:var(--ink-2)}
-
-  /* GOBIERNO */
-  .gov{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--ink)}
-  .gov > div{padding:26px 22px;border-right:1px solid var(--rule)}
-  .gov > div:last-child{border-right:0}
-  .gov .k{font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:var(--blue);text-transform:uppercase}
-  .gov .t{font-weight:700;font-size:17px;margin:10px 0 6px;letter-spacing:-.005em}
-  .gov .d{color:var(--muted);font-size:14px}
-  .legal{margin-top:24px;display:flex;flex-wrap:wrap;gap:10px 28px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
-  .legal b{color:var(--ink);font-weight:600}
-
-  /* VISIÓN */
-  .vision{background:var(--ink);color:var(--paper);border-bottom:0}
-  .vision .head .num{color:var(--red)}
-  .vision .head p{color:#C9CCD3}
-  .vision .quote{font-size:clamp(26px,3.2vw,42px);line-height:1.18;letter-spacing:-.02em;font-weight:700;max-width:26ch;margin:0}
-  .vision .quote em{font-style:normal;color:#8FB0FF}
-  .timeline{margin-top:64px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #2A3247}
-  .timeline > div{padding:24px 24px 0 0}
-  .timeline > div + div{padding-left:24px;border-left:1px solid #2A3247}
-  .timeline .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;color:#8B93A3;text-transform:uppercase}
-  .timeline .t{font-weight:700;font-size:18px;margin:8px 0 6px}
-  .timeline .d{color:#AEB4C0;font-size:14.5px}
-  .timeline .now .k{color:#3DDC84}
-
-  /* CONTACTO */
-  .contact{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-  .contact .big{font-size:clamp(22px,2.3vw,30px);line-height:1.3;letter-spacing:-.01em;font-weight:500;margin:0}
-  .channels{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
-  .channels li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--rule);align-items:baseline}
-  .channels .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase}
-  .channels a{font-weight:600;border-bottom:1px solid var(--rule);transition:border-color .15s}
-  .channels a:hover{border-color:var(--ink)}
-
-  /* FOOTER */
-  footer.site{padding:48px 0 32px}
-  footer.site .row{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}
-  footer.site h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.24em;color:var(--muted);margin:0 0 12px;text-transform:uppercase;font-weight:500}
-  footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:7px;font-size:13.5px}
-  footer.site .tag{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--muted);margin-top:16px;max-width:36ch;text-transform:uppercase}
-  footer.site .meta{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:40px;padding-top:20px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase}
-
-  /* reveal */
-  .rv{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
-  .rv.in{opacity:1;transform:none}
-  @media (prefers-reduced-motion:reduce){
-    .rv{opacity:1;transform:none;transition:none}
-    .spec .plan .jet,.live i{animation:none}
-    html{scroll-behavior:auto}
-  }
-
-  /* RESPONSIVE */
-  @media (max-width:1000px){
-    .hero .grid,.model,.contact{grid-template-columns:1fr;gap:44px}
-    .head{grid-template-columns:1fr;gap:10px}
-    .head .num{padding-top:0}
-    .status .wrap{grid-template-columns:repeat(2,1fr)}
-    .status .cell:nth-child(3){padding-left:0;border-left:0}
-    .status .cell:nth-child(n+3){border-top:1px solid var(--rule)}
-    .tri{grid-template-columns:1fr}
-    .nums{grid-template-columns:repeat(2,1fr)}
-    .nums > div:nth-child(3){padding-left:0;border-left:0}
-    .nums > div:nth-child(n+3){border-top:1px solid var(--rule)}
-    .tri article,.tri article + article{padding:28px 0;border-left:0;border-bottom:1px solid var(--rule)}
-    .gov{grid-template-columns:repeat(2,1fr)}
-    .gov > div:nth-child(2){border-right:0}
-    .gov > div:nth-child(-n+2){border-bottom:1px solid var(--rule)}
-    .timeline{grid-template-columns:1fr}
-    .timeline > div,.timeline > div + div{padding:22px 0;border-left:0;border-bottom:1px solid #2A3247}
-    footer.site .row{grid-template-columns:1fr 1fr}
-    nav.main a.hide-sm{display:none}
-  }
-  @media (max-width:640px){
-    .wrap{padding:0 20px}
-    .classbar .hide-xs{display:none}
-    .hero{padding-top:56px}
-    .prog{grid-template-columns:1fr}
-    .status .wrap{grid-template-columns:1fr}
-    .status .cell,.status .cell + .cell{padding:16px 0;border-left:0;border-top:1px solid var(--rule)}
-    .status .cell:first-child{border-top:0}
-    .gov{grid-template-columns:1fr}
-    .gov > div{border-right:0;border-bottom:1px solid var(--rule)}
-    .gov > div:last-child{border-bottom:0}
-    .channels li{grid-template-columns:1fr;gap:4px}
-    nav.main{gap:14px}
-    nav.main .cta{display:none}
-    section.block{padding:72px 0}
-    footer.site .row{grid-template-columns:1fr}
-    .spec{box-shadow:8px 8px 0 var(--paper-3)}
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/site.css" />
 </head>
 <body>
-
-<!-- ===================== CLASS BAR ===================== -->
-<div class="classbar" role="note">
-  <div class="wrap">
-    <span class="live"><i></i><span data-es>Sistemas en línea</span><span data-en>Systems online</span></span>
-    <span class="hide-xs"><span data-es>Doc · BBT-002 · Público · Rev. 10.2026</span><span data-en>Doc · BBT-002 · Public · Rev. 10.2026</span></span>
-    <span><b>Santiago · Chile</b></span>
-  </div>
-</div>
-
-<!-- ===================== TOP BAR ===================== -->
-<header class="topbar" id="topbar">
+<header class="topbar">
   <div class="wrap row">
-    <a href="#top" class="brand" aria-label="Blackbird Tech">
-      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
-        <rect width="64" height="64" rx="10" fill="#0B1020"/>
-        <path d="M8 33 L30 29 L40 20 L44 20 L42 29 L56 32 L42 35 L44 44 L40 44 L30 35 Z" fill="#FAFAF7"/>
-        <circle cx="50" cy="32" r="2" fill="#FC3D21"/>
-      </svg>
+    <a href="/" class="brand" aria-label="Blackbird Tech">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#0B1020"/><path d="M8 33 L30 29 L40 20 L44 20 L42 29 L56 32 L42 35 L44 44 L40 44 L30 35 Z" fill="#FAFAF7"/><circle cx="50" cy="32" r="2" fill="#FC3D21"/></svg>
       <span class="name">BLACKBIRD TECH<small>SOFTWARE · IA APLICADA</small></span>
     </a>
-    <nav class="main" aria-label="primary">
-      <a href="#que-hacemos" class="hide-sm"><span data-es>Qué hacemos</span><span data-en>What we do</span></a>
-      <a href="#tecnologia" class="hide-sm"><span data-es>Tecnología</span><span data-en>Technology</span></a>
-      <a href="#prototipos"><span data-es>Prototipos</span><span data-en>Prototypes</span></a>
-      <a href="#gobierno" class="hide-sm"><span data-es>Gobierno</span><span data-en>Governance</span></a>
+    <nav class="main" aria-label="principal">
+      <a href="/" class="on"><span data-es>Inicio</span><span data-en>Home</span></a>
+      <a href="/nosotros.html" class="hide-sm"><span data-es>Quiénes somos</span><span data-en>Who we are</span></a>
+      <a href="/productos.html"><span data-es>Productos</span><span data-en>Products</span></a>
+      <a href="/contacto.html" class="hide-sm"><span data-es>Contacto</span><span data-en>Contact</span></a>
       <div class="lang" role="tablist" aria-label="Language">
         <button id="lang-es" class="on" role="tab" aria-selected="true">ES</button>
         <button id="lang-en" role="tab" aria-selected="false">EN</button>
       </div>
-      <a href="#contacto" class="cta"><span data-es>Contacto</span><span data-en>Contact</span></a>
+      <a href="/a10/" class="cta hit"><span data-es>Descargar A10</span><span data-en>Download A10</span></a>
     </nav>
   </div>
 </header>
 
-<main id="top">
-
-<!-- ===================== HERO ===================== -->
-<section class="hero">
-  <div class="wrap">
-    <div class="grid">
-      <div class="rv">
-        <div class="eyebrow"><span data-es>Blackbird Tech SpA · AI-native · LATAM</span><span data-en>Blackbird Tech SpA · AI-native · LATAM</span></div>
-        <h1>
-          <span data-es>Una empresa <em>construida</em> por agentes<span class="r">.</span><br/>Operada por un humano<span class="r">.</span></span>
-          <span data-en>A company <em>built</em> by agents<span class="r">.</span><br/>Run by one human<span class="r">.</span></span>
-        </h1>
-        <p class="lede">
-          <span data-es>Desarrollamos software e inteligencia artificial aplicada desde Santiago de Chile. Nuestros agentes trabajan en producción las 24 horas: observan, deciden y ejecutan en tiempo real. Las decisiones que no tienen vuelta atrás siempre pasan por una persona.</span>
-          <span data-en>We build software and applied artificial intelligence from Santiago, Chile. Our agents run in production around the clock: they observe, decide and execute in real time. Every decision that can't be undone always goes through a person.</span>
-        </p>
-        <div class="actions">
-          <a href="#tecnologia" class="cta"><span data-es>Ver la tecnología</span><span data-en>See the technology</span>
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-          <a href="#contacto" class="cta ghost"><span data-es>Hablemos</span><span data-en>Let's talk</span></a>
-        </div>
+<main>
+  <section class="hero">
+    <div class="wrap rv">
+      <p class="eyebrow">A10 · Chile · LatAm</p>
+      <h1>
+        <span data-es>Baja al mostrador.<br>Cobra. <i>Aguanta.</i></span>
+        <span data-en>Hits the counter.<br>Charges. <i>Holds.</i></span>
+      </h1>
+      <p class="lede">
+        <span data-es>La caja de un local de celulares. Hecha para el sucio del mesón, no para la vitrina. Un trabajo: que la venta no se pierda.</span>
+        <span data-en>The till for a phone shop. Built for the mess of the counter, not the showroom. One job: the sale does not get lost.</span>
+      </p>
+      <div class="actions">
+        <a class="cta hit" href="/a10/"><span data-es>Descargar A10</span><span data-en>Download A10</span></a>
+        <a class="cta ghost" href="/productos.html"><span data-es>Ver productos</span><span data-en>See products</span></a>
       </div>
-
-      <figure class="spec rv" aria-hidden="true" style="margin:0">
-        <header><span>Schematic · BBT · Rev. 6</span><span>Sheet 1/1</span></header>
-        <div class="plan">
-          <svg viewBox="0 0 500 300" fill="none">
-            <g stroke="#0B3D91" stroke-width="1" opacity=".35" stroke-dasharray="3 5">
-              <path d="M20 150 H480"/><path d="M250 20 V280"/>
-            </g>
-            <g class="jet" stroke="#0B1020" stroke-width="1.3" stroke-linejoin="round">
-              <path d="M455 150 C430 146 385 141 330 138 L300 128 L245 80 L222 80 L235 128 L150 133 L120 104 L104 104 L112 136 L62 140 L62 160 L112 164 L104 196 L120 196 L150 167 L235 172 L222 220 L245 220 L300 172 L330 162 C385 159 430 154 455 150 Z" fill="#FAFAF7"/>
-              <ellipse cx="210" cy="104" rx="70" ry="6" fill="#F2F2EC"/>
-              <ellipse cx="210" cy="196" rx="70" ry="6" fill="#F2F2EC"/>
-              <path d="M140 104 L118 98 M140 196 L118 202" />
-              <path d="M330 138 C300 143 200 146 70 147 M330 162 C300 157 200 154 70 153" opacity=".55"/>
-              <path d="M395 146 L410 150 L395 154 Z" fill="#0B1020"/>
-            </g>
-            <g stroke="#FC3D21" stroke-width="1.2">
-              <circle cx="455" cy="150" r="4"/><circle cx="62" cy="150" r="4"/>
-              <path d="M62 250 H455" stroke-dasharray="2 3"/>
-              <path d="M62 244 V256 M455 244 V256"/>
-            </g>
-            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#0B1020" stroke="none">
-              <text x="22" y="34">BLACKBIRD TECH // PLATFORM</text>
-              <text x="22" y="50" fill="#5B6472">CLASS: AUTONOMOUS AGENTS</text>
-              <text x="372" y="34" fill="#5B6472">SCALE 1:∞</text>
-              <text x="210" y="272" fill="#FC3D21">REACCIÓN &lt; 1 s</text>
-            </g>
-          </svg>
-          <div class="stamp">EN SERVICIO</div>
-        </div>
-        <dl>
-          <div><dt><span data-es>Operación</span><span data-en>Operation</span></dt><dd>24 / 7</dd></div>
-          <div><dt><span data-es>Reacción</span><span data-en>Reaction</span></dt><dd>&lt; 1 s</dd></div>
-          <div><dt><span data-es>Control</span><span data-en>Control</span></dt><dd><span data-es>Humano</span><span data-en>Human</span></dd></div>
-          <div><dt>HQ</dt><dd>Santiago · CL</dd></div>
-        </dl>
-      </figure>
     </div>
-  </div>
-
-  <div class="status rv">
     <div class="wrap">
-      <div class="cell"><span class="ok"></span><div>
-        <div class="t"><span data-es>Agentes en producción</span><span data-en>Agents in production</span></div>
-        <div class="d"><span data-es>Operando 24/7</span><span data-en>Running 24/7</span></div></div></div>
-      <div class="cell"><span class="ok"></span><div>
-        <div class="t"><span data-es>Conciliación automática</span><span data-en>Automated reconciliation</span></div>
-        <div class="d"><span data-es>Cada movimiento cuadrado</span><span data-en>Every movement matched</span></div></div></div>
-      <div class="cell"><span class="ok"></span><div>
-        <div class="t"><span data-es>Tributación electrónica</span><span data-en>Electronic tax documents</span></div>
-        <div class="d"><span data-es>Documentos ante el SII</span><span data-en>Filed with Chile's SII</span></div></div></div>
-      <div class="cell"><span class="ok"></span><div>
-        <div class="t"><span data-es>Control humano</span><span data-en>Human control</span></div>
-        <div class="d"><span data-es>En toda acción irreversible</span><span data-en>On every irreversible action</span></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 01 QUÉ HACEMOS ===================== -->
-<section class="block" id="que-hacemos">
-  <div class="wrap">
-    <div class="head rv">
-      <div class="num">01 · <span data-es>Qué hacemos</span><span data-en>What we do</span></div>
-      <div>
-        <h2><span data-es>Software que trabaja, no que se presenta.</span><span data-en>Software that works, not software that demos.</span></h2>
-        <p><span data-es>Construimos sistemas para operar negocios reales: primero los usamos nosotros, en nuestra propia operación, todos los días. Lo que sobrevive a eso es lo que ofrecemos.</span><span data-en>We build systems that run real businesses: we use them first, in our own operation, every day. What survives that is what we offer.</span></p>
+      <div class="punch">
+        <article class="rv">
+          <b><span data-es>Cerca</span><span data-en>Close</span></b>
+          <p><span data-es>Busca, cobra, listo. Un toque. El que atiende no espera a nadie.</span><span data-en>Search, charge, done. One tap. The person at the counter waits for no one.</span></p>
+        </article>
+        <article class="rv">
+          <b><span data-es>Duro</span><span data-en>Tough</span></b>
+          <p><span data-es>Se cae la red y el cobro sigue. La plata de hoy no se va con el wifi.</span><span data-en>The network drops and checkout keeps going. Today’s money does not leave with the wifi.</span></p>
+        </article>
+        <article class="rv">
+          <b><span data-es>Al cierre</span><span data-en>At close</span></b>
+          <p><span data-es>Venta, costo, margen, stock. El dueño sabe qué ganó y qué falta.</span><span data-en>Sales, cost, margin, stock. The owner knows what was earned and what is short.</span></p>
+        </article>
       </div>
     </div>
+  </section>
 
-    <div class="tri">
-      <article class="rv">
-        <svg class="ico" viewBox="0 0 44 44" fill="none" stroke="#0B1020" stroke-width="1.4"><rect x="1" y="1" width="42" height="42"/><path d="M8 30 L16 22 L22 27 L36 12" stroke="#0B3D91" stroke-width="2"/><circle cx="36" cy="12" r="2.5" fill="#FC3D21" stroke="none"/></svg>
-        <h3><span data-es>Agentes operacionales</span><span data-en>Operational agents</span></h3>
-        <p><span data-es>Agentes autónomos que leen mercados y operaciones en tiempo real, toman decisiones en menos de un segundo y atienden a contrapartes, con reglas duras y límites que no pueden saltarse.</span><span data-en>Autonomous agents that read markets and operations in real time, decide in under a second and handle counterparties — with hard rules and limits they cannot bypass.</span></p>
-        <ul>
-          <li><span data-es>Decisión en tiempo real</span><span data-en>Real-time decisions</span></li>
-          <li><span data-es>Límites y topes en código</span><span data-en>Limits enforced in code</span></li>
-          <li><span data-es>Vigilancia y recuperación automática</span><span data-en>Watchdogs and self-recovery</span></li>
+  <section class="a10band">
+    <div class="wrap a10grid">
+      <div class="rv">
+        <p class="eyebrow">A10</p>
+        <h2>
+          <span data-es>Una máquina.<br>Un trabajo.<br><i>No se rinde.</i></span>
+          <span data-en>One machine.<br>One job.<br><i>It does not quit.</i></span>
+        </h2>
+        <p class="lede">
+          <span data-es>Caja, taller e inventario en el mismo PC. IMEI cuando el ítem lo pide. Llegó, en mesa, listo, entregado. Sin internet el cobro sigue.</span>
+          <span data-en>Till, workshop and stock on the same PC. IMEI when the item needs it. In, on the bench, ready, out. No internet, checkout still runs.</span>
+        </p>
+        <ul class="hits">
+          <li><b><span data-es>El cobro no espera</span><span data-en>Checkout does not wait</span></b><span><span data-es>Ni a internet, ni a otro sistema, ni a una planilla.</span><span data-en>Not for the internet, not for another system, not for a spreadsheet.</span></span></li>
+          <li><b><span data-es>Hecho para el golpe</span><span data-en>Built for the hit</span></b><span><span data-es>PC barato del mesón. Windows. Un proceso. Si se corta la luz, la venta ya está guardada.</span><span data-en>Cheap counter PC. Windows. One process. If the power cuts, the sale is already saved.</span></span></li>
+          <li><b><span data-es>Precisión al cierre</span><span data-en>Precision at close</span></b><span><span data-es>Cuánto vendiste, cuánto te quedó, qué se acaba. Sin adorno.</span><span data-en>What you sold, what you kept, what is running out. No decoration.</span></span></li>
         </ul>
-      </article>
-      <article class="rv">
-        <svg class="ico" viewBox="0 0 44 44" fill="none" stroke="#0B1020" stroke-width="1.4"><rect x="1" y="1" width="42" height="42"/><rect x="9" y="10" width="26" height="6" stroke="#0B3D91"/><rect x="9" y="20" width="16" height="6"/><rect x="9" y="30" width="22" height="5"/><circle cx="33" cy="23" r="2.5" fill="#FC3D21" stroke="none"/></svg>
-        <h3><span data-es>Software para operar</span><span data-en>Software to run operations</span></h3>
-        <p><span data-es>Paneles de mando, conciliación bancaria, contabilidad y emisión de documentos tributarios electrónicos. Sistemas que dejan cada operación registrada, cuadrada y lista para auditar.</span><span data-en>Command dashboards, bank reconciliation, accounting and electronic tax documents. Systems that leave every operation recorded, matched and audit-ready.</span></p>
-        <ul>
-          <li><span data-es>Paneles en vivo · web y iPhone</span><span data-en>Live dashboards · web and iPhone</span></li>
-          <li><span data-es>Conciliación y contabilidad</span><span data-en>Reconciliation and accounting</span></li>
-          <li><span data-es>Documentos tributarios electrónicos</span><span data-en>Electronic tax documents</span></li>
-        </ul>
-      </article>
-      <article class="rv">
-        <svg class="ico" viewBox="0 0 44 44" fill="none" stroke="#0B1020" stroke-width="1.4"><rect x="1" y="1" width="42" height="42"/><circle cx="22" cy="22" r="10" stroke="#0B3D91"/><circle cx="22" cy="22" r="4"/><path d="M22 6 V12 M22 32 V38 M6 22 H12 M32 22 H38"/><circle cx="22" cy="22" r="1.6" fill="#FC3D21" stroke="none"/></svg>
-        <h3><span data-es>I+D en IA aplicada</span><span data-en>Applied AI R&amp;D</span></h3>
-        <p><span data-es>Modelos de lenguaje corriendo en infraestructura propia, sin enviar datos sensibles a terceros. Investigamos cómo un equipo mínimo puede operar con la escala de uno grande.</span><span data-en>Language models running on our own infrastructure, without sending sensitive data to third parties. We research how a minimal team can operate at the scale of a large one.</span></p>
-        <ul>
-          <li><span data-es>Modelos locales · datos privados</span><span data-en>Local models · private data</span></li>
-          <li><span data-es>Infraestructura propia</span><span data-en>Own infrastructure</span></li>
-          <li><span data-es>Agentes que aprenden de la operación</span><span data-en>Agents that learn from operations</span></li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 02 MODELO ===================== -->
-<section class="block" id="modelo">
-  <div class="wrap">
-    <div class="head rv">
-      <div class="num">02 · <span data-es>Modelo</span><span data-en>Model</span></div>
-      <div>
-        <h2><span data-es>Un comandante. Muchos agentes. Reglas claras.</span><span data-en>One commander. Many agents. Clear rules.</span></h2>
-        <p><span data-es>Blackbird funciona como un programa aeroespacial: un humano fija la misión y autoriza lo crítico; los agentes ejecutan, vigilan y reportan. Del rigor de la NASA tomamos la trazabilidad; de Skunk Works, la velocidad.</span><span data-en>Blackbird runs like an aerospace program: one human sets the mission and authorizes what's critical; agents execute, monitor and report. From NASA we take traceability; from Skunk Works, speed.</span></p>
-      </div>
-    </div>
-
-    <div class="model">
-      <div class="chain rv" aria-label="Cadena de mando">
-        <div class="node human">
-          <div><b><span data-es>Comandante</span><span data-en>Commander</span></b><small><span data-es>Misión · autorización</span><span data-en>Mission · authorization</span></small></div>
-          <span class="badge"><span data-es>Humano</span><span data-en>Human</span></span>
-        </div>
-        <div class="link"><span><span data-es>Autoriza lo irreversible</span><span data-en>Authorizes the irreversible</span></span></div>
-        <div class="agents">
-          <div class="node"><div><b><span data-es>Mercados</span><span data-en>Markets</span></b><small><span data-es>Precio y ejecución</span><span data-en>Pricing · execution</span></small></div></div>
-          <div class="node"><div><b><span data-es>Contrapartes</span><span data-en>Counterparties</span></b><small><span data-es>Atención y verificación</span><span data-en>Service · verification</span></small></div></div>
-          <div class="node"><div><b><span data-es>Tesorería</span><span data-en>Treasury</span></b><small><span data-es>Conciliación</span><span data-en>Reconciliation</span></small></div></div>
-          <div class="node"><div><b><span data-es>Cumplimiento</span><span data-en>Compliance</span></b><small><span data-es>Tributario y riesgo</span><span data-en>Tax · risk</span></small></div></div>
-        </div>
-        <div class="link"><span><span data-es>Reportan y alertan</span><span data-en>Report and alert</span></span></div>
-        <div class="node">
-          <div><b><span data-es>Vigilancia</span><span data-en>Watchdogs</span></b><small><span data-es>Salud · recuperación · auditoría</span><span data-en>Health · recovery · audit</span></small></div>
-          <span class="badge" style="color:var(--ok)">24/7</span>
+        <div class="actions">
+          <a class="cta hit" href="/a10/"><span data-es>Descargar para Windows</span><span data-en>Download for Windows</span></a>
+          <a class="cta light" href="/a10/"><span data-es>También para Mac</span><span data-en>Mac too</span></a>
         </div>
       </div>
-
-      <ul class="rules rv">
-        <li><span class="k">R.01</span><div>
-          <div class="t"><span data-es>Ningún agente ejecuta algo irreversible sin autorización humana.</span><span data-en>No agent executes anything irreversible without human authorization.</span></div>
-          <div class="d"><span data-es>Mover dinero o emitir documentos requiere confirmación explícita. Los límites viven en el código, no en la buena voluntad.</span><span data-en>Moving money or issuing documents requires explicit confirmation. Limits live in code, not in good intentions.</span></div></div></li>
-        <li><span class="k">R.02</span><div>
-          <div class="t"><span data-es>Un agente, una función, una métrica.</span><span data-en>One agent, one job, one metric.</span></div>
-          <div class="d"><span data-es>Cada agente tiene un trabajo claro y un número que dice si lo está haciendo bien.</span><span data-en>Each agent has a clear job and a number that says whether it's doing it well.</span></div></div></li>
-        <li><span class="k">R.03</span><div>
-          <div class="t"><span data-es>Todo tiene vigilancia.</span><span data-en>Everything has a watchdog.</span></div>
-          <div class="d"><span data-es>Si algo se detiene, se sabe en segundos y se recupera solo o alerta a una persona.</span><span data-en>If something stops, we know within seconds — it recovers itself or alerts a person.</span></div></div></li>
-        <li><span class="k">R.04</span><div>
-          <div class="t"><span data-es>Los datos se validan antes de actuar.</span><span data-en>Data is validated before acting.</span></div>
-          <div class="d"><span data-es>Ninguna decisión se toma con un dato viejo o sin confirmar.</span><span data-en>No decision is made on stale or unconfirmed data.</span></div></div></li>
-        <li><span class="k">R.05</span><div>
-          <div class="t"><span data-es>Simple antes que poderoso. Si falla, falla con dignidad.</span><span data-en>Simple over powerful. When it fails, it fails gracefully.</span></div>
-          <div class="d"><span data-es>Registro, alerta y recuperación. Nunca un error silencioso.</span><span data-en>Log, alert and recover. Never a silent error.</span></div></div></li>
-      </ul>
+      <aside class="gun rv">
+        <em></em>
+        <b>1</b>
+        <p><span data-es>toque para cobrar. Después el dueño ve la plata y el stock.</span><span data-en>tap to charge. Then the owner sees the money and the stock.</span></p>
+      </aside>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===================== 02 TECNOLOGÍA ===================== -->
-<section class="block" id="tecnologia">
-  <div class="wrap">
-    <div class="head rv">
-      <div class="num">03 · <span data-es>Tecnología</span><span data-en>Technology</span></div>
-      <div>
-        <h2><span data-es>Tecnología propia, probada en producción.</span><span data-en>Our own technology, proven in production.</span></h2>
-        <p><span data-es>Todo lo que ofrecemos corre primero en nuestra propia operación, las 24 horas, con dinero real. Estas son las piezas que construimos y mantenemos nosotros.</span><span data-en>Everything we offer runs first in our own operation, around the clock, with real money. These are the pieces we build and maintain ourselves.</span></p>
+  <section class="block">
+    <div class="wrap">
+      <h2 class="rv"><span data-es>También hacemos esto.</span><span data-en>We also build this.</span></h2>
+      <p class="sub rv"><span data-es>Dos productos para el barrio. A10 primero. TRISTAR para restaurantes, en prueba.</span><span data-en>Two products for the neighborhood. A10 first. TRISTAR for restaurants, in testing.</span></p>
+      <div class="split">
+        <a class="card a10 rv" href="/a10/">
+          <span class="k">A10</span>
+          <span class="name">A10</span>
+          <p><span data-es>Celulares y taller. La que se usa en el mesón.</span><span data-en>Phones and repair. The one used at the counter.</span></p>
+        </a>
+        <a class="card rv" href="/productos.html#tristar">
+          <span class="k">TRISTAR</span>
+          <span class="name">TRISTAR</span>
+          <p><span data-es>Restaurantes: sala, carta, cobro y cierre. En prueba.</span><span data-en>Restaurants: floor, menu, checkout and close. In testing.</span></p>
+        </a>
       </div>
     </div>
-
-    <div class="nums rv">
-      <div><b>&lt; 1 s</b><span data-es>de dato de mercado a decisión ejecutada</span><span data-en>from market data to executed decision</span></div>
-      <div><b>~2 s</b><span data-es>para detectar y conciliar un abono bancario</span><span data-en>to detect and reconcile a bank deposit</span></div>
-      <div><b>30 min</b><span data-es>entre respaldos cifrados de toda la operación</span><span data-en>between encrypted backups of the whole operation</span></div>
-      <div><b>0</b><span data-es>acciones irreversibles sin una persona que las autorice</span><span data-en>irreversible actions without a person authorizing them</span></div>
-    </div>
-
-    <div class="prog">
-      <article class="card rv" aria-label="Motor de decisión">
-        <div class="hd"><span>Tech · 01</span><span class="state"><i></i><span data-es>En producción</span><span data-en>In production</span></span></div>
-        <div class="illus">
-          <svg viewBox="0 0 400 175" fill="none">
-            <g stroke="#0B3D91" stroke-width="1" opacity=".25"><path d="M20 140 H380"/></g>
-            <path d="M20 120 L60 112 L90 116 L120 96 L150 102 L180 84 L210 90 L240 70 L270 76 L300 58 L330 64 L360 50 L380 54" stroke="#0B3D91" stroke-width="1.6"/>
-            <path d="M20 132 H380" stroke="#FC3D21" stroke-width="1.2" stroke-dasharray="3 3"/>
-            <circle cx="380" cy="54" r="3.5" fill="#FC3D21"/>
-            <g font-family="JetBrains Mono, monospace" font-size="9" fill="#5B6472">
-              <text x="20" y="24">DECISION ENGINE · REAL-TIME</text>
-              <text x="300" y="24">&lt; 1 s</text>
-              <text x="300" y="150" fill="#FC3D21">FLOOR</text>
-            </g>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="sub"><span data-es>Mercados en tiempo real</span><span data-en>Real-time markets</span></div>
-          <div class="name"><span data-es>Motor de decisión</span><span data-en>Decision engine</span></div>
-          <p class="desc"><span data-es>Lee el mercado cada segundo, calcula la mejor posición y la ejecuta en menos de un segundo. Los pisos de seguridad, los cupos y los límites de cada contraparte viven en el código: el motor nunca opera bajo costo ni más allá de lo autorizado.</span><span data-en>Reads the market every second, computes the best position and executes it in under a second. Safety floors, quotas and each counterparty's limits live in code: the engine never operates below cost or beyond what's authorized.</span></p>
-          <dl>
-            <dt><span data-es>Ritmo</span><span data-en>Pace</span></dt><dd><span data-es>Decisión en menos de 1 segundo</span><span data-en>Decisions in under 1 second</span></dd>
-            <dt><span data-es>Seguridad</span><span data-en>Safety</span></dt><dd><span data-es>Pisos y topes duros en código</span><span data-en>Hard floors and caps in code</span></dd>
-            <dt><span data-es>Estado</span><span data-en>Status</span></dt><dd><span data-es>En producción 24/7</span><span data-en>In production 24/7</span></dd>
-          </dl>
-        </div>
-      </article>
-
-      <article class="card rv" aria-label="Agentes conversacionales">
-        <div class="hd"><span>Tech · 02</span><span class="state"><i></i><span data-es>En producción</span><span data-en>In production</span></span></div>
-        <div class="illus">
-          <svg viewBox="0 0 400 175" fill="none" stroke="#0B1020" stroke-width="1.1">
-            <rect x="70" y="44" width="150" height="34" rx="4" fill="#FAFAF7"/>
-            <path d="M84 56 H190 M84 66 H160" stroke="#5B6472" opacity=".7"/>
-            <rect x="180" y="92" width="150" height="34" rx="4" fill="#0B3D91" stroke="none"/>
-            <path d="M194 104 H310 M194 114 H280" stroke="#FAFAF7" opacity=".85"/>
-            <circle cx="330" cy="92" r="3.5" fill="#FC3D21" stroke="none"/>
-            <rect x="70" y="138" width="60" height="18" rx="9" stroke-dasharray="3 3" opacity=".6"/>
-            <g font-family="JetBrains Mono, monospace" font-size="9" fill="#5B6472" stroke="none"><text x="40" y="24">LOCAL LLM · CONVERSATION</text></g>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="sub"><span data-es>Atención con criterio</span><span data-en>Service with judgment</span></div>
-          <div class="name"><span data-es>Agentes conversacionales</span><span data-en>Conversational agents</span></div>
-          <p class="desc"><span data-es>Un modelo de lenguaje que corre en nuestros propios equipos lee cada conversación completa y decide qué responder. El código protege lo crítico: los datos sensibles salen solo de plantillas verificadas, nunca inventa cifras y le pasa el caso a una persona cuando duda.</span><span data-en>A language model running on our own hardware reads each full conversation and decides how to reply. Code guards what's critical: sensitive data only comes from verified templates, it never makes up figures, and it hands the case to a person when in doubt.</span></p>
-          <dl>
-            <dt><span data-es>Modelo</span><span data-en>Model</span></dt><dd><span data-es>Local: la conversación no sale de casa</span><span data-en>Local: conversations stay in-house</span></dd>
-            <dt><span data-es>Respuesta</span><span data-en>Reply</span></dt><dd><span data-es>2 a 3 segundos</span><span data-en>2 to 3 seconds</span></dd>
-            <dt><span data-es>Límite</span><span data-en>Limit</span></dt><dd><span data-es>Escala a una persona cuando duda</span><span data-en>Escalates to a person when unsure</span></dd>
-          </dl>
-        </div>
-      </article>
-
-      <article class="card rv" aria-label="Conciliación">
-        <div class="hd"><span>Tech · 03</span><span class="state"><i></i><span data-es>En producción</span><span data-en>In production</span></span></div>
-        <div class="illus">
-          <svg viewBox="0 0 400 175" fill="none" stroke="#0B1020" stroke-width="1.1">
-            <rect x="50" y="50" width="110" height="76" fill="#FAFAF7"/>
-            <path d="M62 66 H148 M62 82 H130 M62 98 H142 M62 114 H120" stroke="#5B6472" opacity=".6"/>
-            <rect x="240" y="50" width="110" height="76" fill="#FAFAF7"/>
-            <path d="M252 66 H338 M252 82 H320 M252 98 H332 M252 114 H310" stroke="#5B6472" opacity=".6"/>
-            <path d="M160 82 H240" stroke="#0B3D91" stroke-width="1.6"/>
-            <path d="M232 76 L240 82 L232 88" stroke="#0B3D91" stroke-width="1.6"/>
-            <circle cx="200" cy="82" r="11" fill="#FAFAF7" stroke="#0B3D91"/>
-            <path d="M194 82 L198 86 L206 77" stroke="#0B3D91" stroke-width="1.6"/>
-            <circle cx="350" cy="50" r="3.5" fill="#FC3D21" stroke="none"/>
-            <g font-family="JetBrains Mono, monospace" font-size="9" fill="#5B6472" stroke="none">
-              <text x="40" y="24">BANK ↔ LEDGER · AUTO-MATCH</text>
-              <text x="186" y="112">~2 s</text>
-            </g>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="sub"><span data-es>Tesorería y contabilidad</span><span data-en>Treasury and accounting</span></div>
-          <div class="name"><span data-es>Conciliación en segundos</span><span data-en>Reconciliation in seconds</span></div>
-          <p class="desc"><span data-es>Cada abono bancario se detecta a los pocos segundos de llegar y se empareja solo con la operación que corresponde. El costo por lote, los márgenes y los documentos tributarios electrónicos salen de esos mismos datos, listos para la contabilidad.</span><span data-en>Every bank deposit is detected seconds after it lands and matched automatically to the right operation. Lot costs, margins and electronic tax documents come from that same data, ready for accounting.</span></p>
-          <dl>
-            <dt><span data-es>Detección</span><span data-en>Detection</span></dt><dd><span data-es>~2 segundos por abono</span><span data-en>~2 seconds per deposit</span></dd>
-            <dt><span data-es>Contabilidad</span><span data-en>Accounting</span></dt><dd><span data-es>Costo real por lote, margen por operación</span><span data-en>Real cost per lot, margin per operation</span></dd>
-            <dt>SII</dt><dd><span data-es>Documentos tributarios electrónicos</span><span data-en>Electronic tax documents</span></dd>
-          </dl>
-        </div>
-      </article>
-
-      <article class="card rv" aria-label="Cabina">
-        <div class="hd"><span>Tech · 04</span><span class="state"><i></i><span data-es>En producción</span><span data-en>In production</span></span></div>
-        <div class="illus">
-          <svg viewBox="0 0 400 175" fill="none" stroke="#0B1020" stroke-width="1.1">
-            <rect x="40" y="40" width="96" height="56" fill="#FAFAF7"/><rect x="152" y="40" width="96" height="56" fill="#FAFAF7"/><rect x="264" y="40" width="96" height="56" fill="#FAFAF7"/>
-            <path d="M50 84 L70 70 L88 76 L126 52" stroke="#0B3D91" stroke-width="1.5"/>
-            <circle cx="200" cy="68" r="18" stroke="#0B3D91"/><path d="M200 68 L212 56" stroke="#FC3D21" stroke-width="1.6"/>
-            <rect x="276" y="76" width="12" height="12" fill="#0B3D91" stroke="none"/><rect x="294" y="66" width="12" height="22" fill="#0B3D91" stroke="none"/><rect x="312" y="58" width="12" height="30" fill="#0B3D91" stroke="none"/><rect x="330" y="70" width="12" height="18" fill="#FC3D21" stroke="none"/>
-            <rect x="40" y="110" width="320" height="26" fill="#FAFAF7"/>
-            <path d="M52 123 H180" stroke-dasharray="2 4" opacity=".6"/>
-            <g font-family="JetBrains Mono, monospace" font-size="9" fill="#5B6472" stroke="none"><text x="40" y="24">COCKPIT · TELEMETRY</text></g>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="sub"><span data-es>Mando y vigilancia</span><span data-en>Command and monitoring</span></div>
-          <div class="name"><span data-es>Cabina de mando</span><span data-en>Command cockpit</span></div>
-          <p class="desc"><span data-es>Panel web y app nativa para iPhone con telemetría en vivo, alertas y acciones protegidas con Face ID o PIN. Detrás, vigilantes que reinician lo que se cae solo y respaldos cifrados de toda la operación.</span><span data-en>Web dashboard and native iPhone app with live telemetry, alerts and actions protected by Face ID or PIN. Behind it, watchdogs that restart whatever goes down and encrypted backups of the whole operation.</span></p>
-          <dl>
-            <dt><span data-es>Acceso</span><span data-en>Access</span></dt><dd><span data-es>Web + iPhone · doble factor</span><span data-en>Web + iPhone · two-factor</span></dd>
-            <dt><span data-es>Acciones</span><span data-en>Actions</span></dt><dd><span data-es>Face ID o PIN en lo crítico</span><span data-en>Face ID or PIN on critical actions</span></dd>
-            <dt><span data-es>Respaldo</span><span data-en>Backup</span></dt><dd><span data-es>Cifrado, cada 30 minutos</span><span data-en>Encrypted, every 30 minutes</span></dd>
-          </dl>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 03 PROTOTIPOS ===================== -->
-<section class="block" id="prototipos">
-  <div class="wrap">
-    <div class="head rv">
-      <div class="num">04 · <span data-es>Prototipos</span><span data-en>Prototypes</span></div>
-      <div>
-        <h2><span data-es>Lo que viene: negocios de barrio con tecnología de punta.</span><span data-en>What's next: neighborhood businesses with cutting-edge technology.</span></h2>
-        <p><span data-es>Tomamos lo que ya funciona en nuestra operación y lo convertimos en productos para negocios reales. Los dos primeros están en prueba y buscamos locales piloto.</span><span data-en>We take what already works in our operation and turn it into products for real businesses. The first two are in testing and we're looking for pilot locations.</span></p>
-      </div>
-    </div>
-
-    <div class="prog">
-      <article class="card rv" aria-label="TRISTAR">
-        <div class="hd"><span>Prototype · TRISTAR</span><span class="state dev"><i></i><span data-es>En prueba</span><span data-en>In testing</span></span></div>
-        <div class="illus">
-          <svg viewBox="0 0 400 175" fill="none" stroke="#0B1020" stroke-width="1.1">
-            <rect x="120" y="40" width="160" height="96" rx="6" fill="#FAFAF7"/>
-            <rect x="132" y="52" width="88" height="72" stroke="#0B3D91"/>
-            <path d="M144 68 H206 M144 82 H196 M144 96 H204 M144 110 H186" stroke="#0B3D91" opacity=".6"/>
-            <rect x="230" y="52" width="38" height="20" fill="#0B3D91" stroke="none"/><rect x="230" y="78" width="38" height="20"/><rect x="230" y="104" width="38" height="20"/>
-            <circle cx="268" cy="52" r="3.5" fill="#FC3D21" stroke="none"/>
-            <g font-family="JetBrains Mono, monospace" font-size="9" fill="#5B6472" stroke="none"><text x="40" y="24">TRISTAR · LOCAL-FIRST POS</text></g>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="sub"><span data-es>Restaurantes</span><span data-en>Restaurants</span></div>
-          <div class="name">TRISTAR</div>
-          <p class="desc"><span data-es>El jefe de operaciones del restaurante. Sala con el plano real del local, carta, cobro y cierre de caja, más un guardián que mira las ventas y avisa antes de que se pierda el margen: punto de equilibrio, costo real por plato y turnos dentro de lo que permite la ley.</span><span data-en>The restaurant's head of operations. Floor plan of the actual venue, menu, checkout and cash closing — plus a guardian that watches sales and warns before margin slips: break-even point, real cost per dish and shifts within legal limits.</span></p>
-          <dl>
-            <dt><span data-es>Para</span><span data-en>For</span></dt><dd><span data-es>Dueños, garzones y cocina</span><span data-en>Owners, waiters and kitchen</span></dd>
-            <dt><span data-es>Principio</span><span data-en>Principle</span></dt><dd><span data-es>Funciona aunque se caiga internet</span><span data-en>Keeps working when the internet drops</span></dd>
-            <dt><span data-es>Estado</span><span data-en>Status</span></dt><dd><span data-es>Prototipo · buscando restaurantes piloto</span><span data-en>Prototype · looking for pilot restaurants</span></dd>
-          </dl>
-        </div>
-      </article>
-
-      <article class="card rv" aria-label="A10">
-        <div class="hd"><span>Prototype · A10</span><span class="state dev"><i></i><span data-es>En prueba</span><span data-en>In testing</span></span></div>
-        <div class="illus">
-          <svg viewBox="0 0 400 175" fill="none" stroke="#0B1020" stroke-width="1.1">
-            <rect x="110" y="34" width="62" height="112" rx="10" fill="#FAFAF7"/>
-            <rect x="118" y="46" width="46" height="80" rx="2" stroke="#0B3D91"/>
-            <circle cx="141" cy="136" r="3"/>
-            <path d="M126 62 H156 M126 74 H150 M126 86 H154" stroke="#0B3D91" opacity=".6"/>
-            <rect x="200" y="46" width="96" height="24" fill="#FAFAF7"/><rect x="200" y="78" width="96" height="24" fill="#FAFAF7"/><rect x="200" y="110" width="96" height="24" fill="#FAFAF7"/>
-            <circle cx="214" cy="58" r="4" fill="#1F8A4C" stroke="none"/><circle cx="214" cy="90" r="4" fill="#E8A33D" stroke="none"/><circle cx="214" cy="122" r="4" fill="#0B3D91" stroke="none"/>
-            <path d="M226 58 H282 M226 90 H270 M226 122 H276" stroke="#5B6472" opacity=".6"/>
-            <circle cx="296" cy="46" r="3.5" fill="#FC3D21" stroke="none"/>
-            <g font-family="JetBrains Mono, monospace" font-size="9" fill="#5B6472" stroke="none"><text x="40" y="24">A10 · COUNTER + REPAIR SHOP</text></g>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="sub"><span data-es>Locales de celulares y servicio técnico</span><span data-en>Phone stores and repair shops</span></div>
-          <div class="name">A10</div>
-          <p class="desc"><span data-es>Caja y taller en una sola pantalla. Venta de equipos, accesorios y repuestos con control por IMEI, órdenes de servicio desde que el equipo llega hasta que se entrega, y un mapa del taller con técnicos y semáforo. Los locales pueden mostrarse su stock entre ellos, sin comisión.</span><span data-en>Checkout and repair shop on one screen. Sales of phones, accessories and parts tracked by IMEI, service orders from drop-off to pickup, and a workshop map with technicians and status lights. Stores can share stock with each other, commission-free.</span></p>
-          <dl>
-            <dt><span data-es>Para</span><span data-en>For</span></dt><dd><span data-es>Mostrador y técnicos</span><span data-en>Counter staff and technicians</span></dd>
-            <dt><span data-es>Principio</span><span data-en>Principle</span></dt><dd><span data-es>La venta no espera a nadie, ni a internet</span><span data-en>Sales wait for no one — not even the internet</span></dd>
-            <dt><span data-es>Estado</span><span data-en>Status</span></dt><dd><span data-es>Prototipo · buscando locales piloto</span><span data-en>Prototype · looking for pilot stores</span></dd>
-          </dl>
-          <p style="margin:18px 0 0"><a class="cta" href="/a10/"><span data-es>Descargar A10</span><span data-en>Download A10</span></a></p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 04 GOBIERNO ===================== -->
-<section class="block" id="gobierno">
-  <div class="wrap">
-    <div class="head rv">
-      <div class="num">05 · <span data-es>Gobierno</span><span data-en>Governance</span></div>
-      <div>
-        <h2><span data-es>Automatización con responsabilidad.</span><span data-en>Automation with accountability.</span></h2>
-        <p><span data-es>Para bancos, proveedores y contrapartes: así controlamos lo que nuestros agentes hacen.</span><span data-en>For banks, suppliers and counterparties: this is how we control what our agents do.</span></p>
-      </div>
-    </div>
-
-    <div class="gov rv">
-      <div>
-        <div class="k">G.01</div>
-        <div class="t"><span data-es>Autorización humana</span><span data-en>Human authorization</span></div>
-        <div class="d"><span data-es>Toda acción irreversible exige confirmación del responsable, con límites fijos por operación y por día.</span><span data-en>Every irreversible action requires confirmation by the person in charge, with fixed limits per operation and per day.</span></div>
-      </div>
-      <div>
-        <div class="k">G.02</div>
-        <div class="t"><span data-es>Registro auditable</span><span data-en>Audit trail</span></div>
-        <div class="d"><span data-es>Cada operación queda registrada con fecha, monto, contraparte y quién la autorizó. Las contrapartes se verifican con proveedores especializados.</span><span data-en>Every operation is recorded with date, amount, counterparty and who authorized it. Counterparties are verified through specialized providers.</span></div>
-      </div>
-      <div>
-        <div class="k">G.03</div>
-        <div class="t"><span data-es>Cumplimiento tributario</span><span data-en>Tax compliance</span></div>
-        <div class="d"><span data-es>Documentos tributarios electrónicos ante el SII y contabilidad conciliada contra los bancos.</span><span data-en>Electronic tax documents filed with Chile's SII and accounting reconciled against bank records.</span></div>
-      </div>
-      <div>
-        <div class="k">G.04</div>
-        <div class="t"><span data-es>Datos protegidos</span><span data-en>Protected data</span></div>
-        <div class="d"><span data-es>Infraestructura propia, acceso con doble factor y respaldos cifrados. Los datos sensibles no salen a terceros.</span><span data-en>Own infrastructure, two-factor access and encrypted backups. Sensitive data is not shared with third parties.</span></div>
-      </div>
-    </div>
-    <div class="legal rv">
-      <span><b>Blackbird Tech SpA</b></span>
-      <span><span data-es>Sociedad por acciones · Chile</span><span data-en>Joint-stock company · Chile</span></span>
-      <span><span data-es>Giro: desarrollo de software e I+D</span><span data-en>Line of business: software development &amp; R&amp;D</span></span>
-      <span>Santiago</span>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 05 VISIÓN ===================== -->
-<section class="block vision" id="vision">
-  <div class="wrap">
-    <div class="head rv">
-      <div class="num">06 · <span data-es>Visión</span><span data-en>Vision</span></div>
-      <div>
-        <p class="quote"><span data-es>La primera empresa de Latinoamérica que <em>se construye a sí misma</em>.</span><span data-en>The first company in Latin America that <em>builds itself</em>.</span></p>
-        <p><span data-es>No queremos más gente haciendo trabajo repetitivo: queremos que cada persona tenga detrás un equipo de agentes que ejecute, vigile y aprenda.</span><span data-en>We don't want more people doing repetitive work: we want every person backed by a team of agents that execute, monitor and learn.</span></p>
-      </div>
-    </div>
-    <div class="timeline rv">
-      <div class="now">
-        <div class="k"><span data-es>Hoy</span><span data-en>Today</span></div>
-        <div class="t"><span data-es>Un humano, muchos agentes</span><span data-en>One human, many agents</span></div>
-        <div class="d"><span data-es>Operación completa de la empresa corriendo con agentes en producción y un comandante.</span><span data-en>The company's full operation runs on agents in production and one commander.</span></div>
-      </div>
-      <div>
-        <div class="k"><span data-es>Siguiente</span><span data-en>Next</span></div>
-        <div class="t"><span data-es>Productos para otros</span><span data-en>Products for others</span></div>
-        <div class="d"><span data-es>TRISTAR para restaurantes y A10 para locales de celulares, probándose en negocios reales.</span><span data-en>TRISTAR for restaurants and A10 for phone stores, being tested in real businesses.</span></div>
-      </div>
-      <div>
-        <div class="k"><span data-es>Horizonte</span><span data-en>Horizon</span></div>
-        <div class="t"><span data-es>Empresas AI-native en LATAM</span><span data-en>AI-native companies across LATAM</span></div>
-        <div class="d"><span data-es>Una forma nueva de construir empresas: pequeñas en personas, grandes en capacidad.</span><span data-en>A new way to build companies: small in headcount, large in capability.</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 06 CONTACTO ===================== -->
-<section class="block" id="contacto">
-  <div class="wrap">
-    <div class="head rv">
-      <div class="num">07 · <span data-es>Contacto</span><span data-en>Contact</span></div>
-      <div>
-        <h2><span data-es>Hablemos.</span><span data-en>Let's talk.</span></h2>
-      </div>
-    </div>
-    <div class="contact">
-      <p class="big rv"><span data-es>Clientes, restaurantes y locales que quieran ser piloto, bancos, proveedores e inversionistas: escríbenos. Respondemos en menos de 2 días hábiles.</span><span data-en>Clients, restaurants and stores that want to pilot, banks, suppliers and investors: write to us. We reply within 2 business days.</span></p>
-      <ul class="channels rv">
-        <li><span class="k"><span data-es>Contacto</span><span data-en>Contact</span></span><a href="mailto:ops@blackbirdtech.cl">ops@blackbirdtech.cl</a></li>
-        <li><span class="k"><span data-es>Piloto TRISTAR</span><span data-en>TRISTAR pilot</span></span><a href="mailto:ops@blackbirdtech.cl?subject=Piloto%20TRISTAR"><span data-es>Quiero probarlo en mi restaurante</span><span data-en>I want to try it in my restaurant</span></a></li>
-        <li><span class="k"><span data-es>Piloto A10</span><span data-en>A10 pilot</span></span><a href="/a10/"><span data-es>Descargar A10</span><span data-en>Download A10</span></a></li>
-        <li><span class="k"><span data-es>Oficina</span><span data-en>Office</span></span><span>Santiago, Chile</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
+  </section>
 </main>
 
-<!-- ===================== FOOTER ===================== -->
 <footer class="site">
   <div class="wrap">
     <div class="row">
       <div>
-        <a href="#top" class="brand" aria-label="Blackbird Tech">
-          <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
-            <rect width="64" height="64" rx="10" fill="#0B1020"/>
-            <path d="M8 33 L30 29 L40 20 L44 20 L42 29 L56 32 L42 35 L44 44 L40 44 L30 35 Z" fill="#FAFAF7"/>
-            <circle cx="50" cy="32" r="2" fill="#FC3D21"/>
-          </svg>
-          <span class="name">BLACKBIRD TECH<small>SOFTWARE · IA APLICADA</small></span>
-        </a>
-        <p class="tag"><span data-es>Una empresa construida por agentes. Operada por un humano.</span><span data-en>A company built by agents. Run by one human.</span></p>
+        <a href="/" class="brand"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#0B1020"/><path d="M8 33 L30 29 L40 20 L44 20 L42 29 L56 32 L42 35 L44 44 L40 44 L30 35 Z" fill="#FAFAF7"/><circle cx="50" cy="32" r="2" fill="#FC3D21"/></svg><span class="name">BLACKBIRD TECH<small>SANTIAGO</small></span></a>
+        <p class="tag"><span data-es>Software que trabaja. Operado por un humano.</span><span data-en>Software that works. Run by one human.</span></p>
       </div>
       <div>
-        <h4><span data-es>Programas</span><span data-en>Programs</span></h4>
+        <h4><span data-es>Sitio</span><span data-en>Site</span></h4>
         <ul>
-          <li><a href="#tecnologia"><span data-es>Motor de decisión</span><span data-en>Decision engine</span></a></li>
-          <li><a href="#tecnologia"><span data-es>Agentes conversacionales</span><span data-en>Conversational agents</span></a></li>
-          <li><a href="#prototipos">TRISTAR</a></li>
-          <li><a href="#prototipos">A10</a></li>
+          <li><a href="/nosotros.html"><span data-es>Quiénes somos</span><span data-en>Who we are</span></a></li>
+          <li><a href="/productos.html"><span data-es>Productos</span><span data-en>Products</span></a></li>
+          <li><a href="/a10/">A10</a></li>
+          <li><a href="/contacto.html"><span data-es>Contacto</span><span data-en>Contact</span></a></li>
         </ul>
       </div>
       <div>
-        <h4><span data-es>Compañía</span><span data-en>Company</span></h4>
+        <h4><span data-es>Productos</span><span data-en>Products</span></h4>
         <ul>
-          <li><a href="#que-hacemos"><span data-es>Qué hacemos</span><span data-en>What we do</span></a></li>
-          <li><a href="#modelo"><span data-es>Modelo</span><span data-en>Model</span></a></li>
-          <li><a href="#gobierno"><span data-es>Gobierno</span><span data-en>Governance</span></a></li>
-          <li><a href="#vision"><span data-es>Visión</span><span data-en>Vision</span></a></li>
+          <li><a href="/a10/">A10</a></li>
+          <li><a href="/productos.html#tristar">TRISTAR</a></li>
         </ul>
       </div>
       <div>
-        <h4><span data-es>Contacto</span><span data-en>Contact</span></h4>
+        <h4>Contacto</h4>
         <ul>
           <li><a href="mailto:ops@blackbirdtech.cl">ops@blackbirdtech.cl</a></li>
           <li>Santiago, Chile</li>
@@ -861,43 +156,11 @@
       </div>
     </div>
     <div class="meta">
-      <span>© <span id="yr">2026</span> Blackbird Tech SpA · <span data-es>Todos los derechos reservados</span><span data-en>All rights reserved</span></span>
-      <span>BBT · Santiago · LATAM</span>
+      <span>© <span id="yr">2026</span> Blackbird Tech SpA</span>
+      <span>Santiago · LATAM</span>
     </div>
   </div>
 </footer>
-
-<script>
-  (function(){
-    var html = document.documentElement;
-    var es = document.getElementById('lang-es');
-    var en = document.getElementById('lang-en');
-    function setLang(l){
-      html.setAttribute('data-lang', l);
-      html.setAttribute('lang', l);
-      es.classList.toggle('on', l === 'es');
-      en.classList.toggle('on', l === 'en');
-      es.setAttribute('aria-selected', l === 'es');
-      en.setAttribute('aria-selected', l === 'en');
-    }
-    es.addEventListener('click', function(){ setLang('es'); });
-    en.addEventListener('click', function(){ setLang('en'); });
-    if ((navigator.language || 'es').slice(0, 2).toLowerCase() === 'en') setLang('en');
-
-    document.getElementById('yr').textContent = new Date().getFullYear();
-
-    var bar = document.getElementById('topbar');
-    function onScroll(){ bar.classList.toggle('scrolled', window.scrollY > 8); }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-
-    var els = document.querySelectorAll('.rv');
-    if (!('IntersectionObserver' in window)) { els.forEach(function(e){ e.classList.add('in'); }); return; }
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-    els.forEach(function(e){ io.observe(e); });
-  })();
-</script>
+<script src="/site.js"></script>
 </body>
 </html>

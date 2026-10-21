@@ -4,148 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A10 — Descargar</title>
-  <meta name="description" content="A10, la caja de un local de celulares y taller. Descarga para Windows y Mac.">
+  <meta name="description" content="A10, la caja de un local de celulares. Descarga para Windows y Mac. Cobra aunque se caiga la red.">
   <link rel="canonical" href="https://blackbirdtech.cl/a10/">
   <meta name="theme-color" content="#09090b">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/site.css" />
   <style>
-    :root {
-      --bg: #09090b;
-      --card: #141418;
-      --line: rgba(255,255,255,.1);
-      --ink: #f5f5f2;
-      --mute: #8a8a84;
-      --accent: #ff2d55;
-      --ok: #34c759;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { min-height: 100%; }
-    body {
-      background:
-        radial-gradient(900px 420px at 10% -10%, rgba(255,45,85,.22), transparent 55%),
-        radial-gradient(700px 380px at 110% 10%, rgba(52,199,89,.1), transparent 50%),
-        var(--bg);
-      color: var(--ink);
-      font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      padding: 36px 24px 48px;
-    }
-    .wrap { max-width: 980px; margin: 0 auto; }
-    .back { color: var(--mute); font-size: 13px; text-decoration: none; display: inline-block; margin-bottom: 18px; }
-    .hero {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 28px;
-      align-items: center;
-      margin-bottom: 36px;
-    }
-    .mark {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 56px;
-      height: 56px;
-      border-radius: 14px;
-      background: #1c1c22;
-      color: var(--accent);
-      font-weight: 800;
-      letter-spacing: .04em;
-      margin-bottom: 18px;
-    }
-    h1 {
-      font-size: clamp(36px, 6vw, 58px);
-      font-weight: 750;
-      letter-spacing: -.04em;
-      line-height: .95;
-      margin-bottom: 14px;
-    }
-    h1 i { font-style: normal; color: var(--accent); }
-    .lead {
-      color: var(--mute);
-      font-size: 18px;
-      line-height: 1.45;
-      max-width: 28em;
-      margin-bottom: 22px;
-    }
-    .btns { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; }
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      background: var(--accent);
-      color: #fff;
-      font-weight: 700;
-      font-size: 17px;
-      padding: 14px 22px;
-      border-radius: 12px;
-    }
-    .btn.ghost {
-      background: transparent;
-      color: var(--ink);
-      box-shadow: inset 0 0 0 1px var(--line);
-    }
-    .meta { margin-top: 10px; color: var(--mute); font-size: 13px; line-height: 1.45; }
-    .panel {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 22px;
-      min-height: 220px;
-    }
-    .panel b { display: block; font-size: 42px; letter-spacing: -.04em; margin-bottom: 6px; }
-    .panel span { color: var(--mute); font-size: 14px; }
-    .mosaico {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
-    .tile {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 18px 18px 16px;
-      min-height: 132px;
-    }
-    .tile em {
-      display: block;
-      width: 28px;
-      height: 4px;
-      background: var(--accent);
-      border-radius: 4px;
-      margin-bottom: 14px;
-    }
-    .tile.ok em { background: var(--ok); }
-    .tile b { display: block; font-size: 20px; margin-bottom: 6px; letter-spacing: -.02em; }
-    .tile p { color: #c8c8c2; font-size: 14px; line-height: 1.4; }
-    @media (max-width: 800px) {
-      .hero, .mosaico { grid-template-columns: 1fr; }
-    }
+    body{background:#09090b;color:#f5f5f2}
+    .topbar{background:rgba(9,9,11,.92);border-bottom-color:rgba(255,255,255,.08)}
+    .brand .name,.brand .name small,nav.main a{color:#f5f5f2}
+    .lang{border-color:#f5f5f2}
+    .lang button{color:#f5f5f2}
+    .lang button.on{background:#f5f5f2;color:#09090b}
+    .cta.ghost{color:#f5f5f2;border-color:rgba(255,255,255,.3)}
+    .cta.ghost:hover{background:#f5f5f2;color:#09090b}
+    footer.site{border-top-color:rgba(255,255,255,.1);color:#8a8a84}
+    footer.site h4,footer.site .meta,footer.site .tag{color:#8a8a84}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <a class="back" href="/">Blackbird Tech</a>
-    <header class="hero">
-      <div>
-        <div class="mark">A10</div>
-        <h1>La caja.<br>El taller.<br><i>El cierre.</i></h1>
-        <p class="lead">Cobra en el mostrador, mira qué ganas y qué se acaba. En una pantalla.</p>
-        <p class="btns">
-          <a class="btn" href="A10-Instalador.exe" download="A10-Instalador.exe">Descargar para Windows</a>
-          <a class="btn ghost" href="A10-Mac.zip" download="A10-Mac.zip">Descargar para Mac</a>
-        </p>
-        <p class="meta">Windows: toca el instalador. Mac: descomprime y toca A10. Si macOS se queja, clic derecho → Abrir. El mes se paga desde A10, Ajustes, con el link de Banco de Chile. El cobro no espera ese pago.</p>
-      </div>
-      <aside class="panel">
-        <b>1 toque</b>
-        <span>Busca, cobra, listo. Después el dueño ve la plata y el stock.</span>
-      </aside>
-    </header>
-    <section class="mosaico">
-      <article class="tile"><em></em><b>Cobrar</b><p>Mostrador rápido. Efectivo, débito, crédito o transferencia.</p></article>
-      <article class="tile ok"><em></em><b>Ganar</b><p>Venta, costo y margen. Sabes cuánto quedó al cierre.</p></article>
-      <article class="tile"><em></em><b>Reponer</b><p>Inventario con bajos a la vista. Carga la factura del proveedor.</p></article>
-      <article class="tile"><em></em><b>Taller</b><p>Llegó, en mesa, listo, entregado. Semáforo en el piso.</p></article>
-      <article class="tile"><em></em><b>Ticket</b><p>Con el logo de tu local. Se imprime en el mismo PC.</p></article>
-      <article class="tile"><em></em><b>El mes</b><p>Se paga en Banco de Chile, desde A10. Sin red el cobro sigue.</p></article>
-    </section>
+<header class="topbar">
+  <div class="wrap row">
+    <a href="/" class="brand" aria-label="Blackbird Tech">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#0B1020"/><path d="M8 33 L30 29 L40 20 L44 20 L42 29 L56 32 L42 35 L44 44 L40 44 L30 35 Z" fill="#FAFAF7"/><circle cx="50" cy="32" r="2" fill="#FC3D21"/></svg>
+      <span class="name">BLACKBIRD TECH<small>A10</small></span>
+    </a>
+    <nav class="main">
+      <a href="/">Inicio</a>
+      <a href="/productos.html">Productos</a>
+      <a href="/a10/" class="on">A10</a>
+      <a href="/contacto.html" class="hide-sm">Contacto</a>
+    </nav>
   </div>
+</header>
+
+<main>
+  <section class="a10band" style="margin:0;padding-top:64px">
+    <div class="wrap a10grid">
+      <div>
+        <p class="eyebrow">A10</p>
+        <h2>Baja al mostrador.<br>Cobra. <i>Aguanta.</i></h2>
+        <p class="lede">Windows o Mac. Toca, instala, cobra. El mes se paga después, desde A10, con el link del banco. El cobro no espera ese pago.</p>
+        <p class="actions">
+          <a class="cta hit" href="A10-Instalador.exe" download="A10-Instalador.exe">Descargar para Windows</a>
+          <a class="cta ghost" href="A10-Mac.zip" download="A10-Mac.zip">Descargar para Mac</a>
+        </p>
+        <p class="lede" style="margin-top:18px;font-size:14px">Windows: toca el instalador. Mac: descomprime y toca A10. Si macOS se queja, clic derecho → Abrir.</p>
+      </div>
+      <aside class="gun">
+        <em></em>
+        <b>1</b>
+        <p>toque. Busca, cobra, listo. Después el dueño ve la plata y el stock.</p>
+      </aside>
+    </div>
+    <div class="wrap">
+      <ul class="hits">
+        <li><b>Cerca</b><span>El que atiende no espera a nadie. Un toque.</span></li>
+        <li><b>Duro</b><span>Se cae la red y el cobro sigue. La venta ya está en este PC.</span></li>
+        <li><b>Preciso</b><span>Venta, costo, margen, taller. Al cierre sabes qué quedó.</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="row">
+      <div><a href="/" class="brand"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#0B1020"/><path d="M8 33 L30 29 L40 20 L44 20 L42 29 L56 32 L42 35 L44 44 L40 44 L30 35 Z" fill="#FAFAF7"/><circle cx="50" cy="32" r="2" fill="#FC3D21"/></svg><span class="name">BLACKBIRD TECH<small>SANTIAGO</small></span></a></div>
+      <div><h4>Sitio</h4><ul><li><a href="/">Inicio</a></li><li><a href="/nosotros.html">Quiénes somos</a></li><li><a href="/productos.html">Productos</a></li></ul></div>
+      <div><h4>A10</h4><ul><li><a href="/a10/">Descargar</a></li></ul></div>
+      <div><h4>Mail</h4><ul><li><a href="mailto:ops@blackbirdtech.cl">ops@blackbirdtech.cl</a></li></ul></div>
+    </div>
+    <div class="meta"><span>© <span id="yr">2026</span> Blackbird Tech SpA</span><span>Santiago</span></div>
+  </div>
+</footer>
+<script src="/site.js"></script>
 </body>
 </html>
